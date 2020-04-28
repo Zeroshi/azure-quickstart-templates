@@ -24,7 +24,7 @@
 8. [References](#references)
 
 <a name="objectives">
-# Objective of the POC 
+# Objective of the POC
 This playbook demonstrates a mock virus attack against an unprotected VM resource using a benign test virus file designed to trigger antimalware tools.  After enabling the configuration to protect the VM, the attack will be reattempted to show the protection against virus attack.
 
 <a name="overview">
@@ -45,7 +45,7 @@ It showcases the following use cases:
 Although the deployment takes 10-15mins, the log aggregation by Log Analytics
 take a few hours to get configured in the backend. You may not see
 attack/mitigation logs for detection and prevention events during the
-aggregation time window.  
+aggregation time window.
 Subsequently logs will take 10-15 mins to reflect in Log Analtyics.
 
 Also note, the PowerShell experience in Azure Cloud Shell now runs PowerShell

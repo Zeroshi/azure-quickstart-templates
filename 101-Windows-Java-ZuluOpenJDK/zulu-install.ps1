@@ -31,4 +31,3 @@
  msiexec /quiet /i C:\Windows\Temp\$ZULU_PACK
 
  setx /m JAVA_HOME "C:\Program Files\Zulu\$INSTALL_DIR"
-

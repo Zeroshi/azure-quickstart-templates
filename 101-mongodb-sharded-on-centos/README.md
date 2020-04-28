@@ -5,7 +5,7 @@
 
 ![Azure US Gov Last Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/101-mongodb-sharded-on-centos/FairfaxLastTestDate.svg)
 ![Azure US Gov Last Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/101-mongodb-sharded-on-centos/FairfaxDeployment.svg)
-  
+
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-mongodb-sharded-on-centos/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-mongodb-sharded-on-centos/CredScanResult.svg)
 

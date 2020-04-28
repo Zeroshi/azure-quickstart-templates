@@ -148,7 +148,7 @@ url for the route.
 <img src="images/dukes_route.png"/>
 
 Click on the link under "Hostname". This will open the JBoss EAP Welcome screen:
-  
+
 <img src="images/welcomeToEAP.png"/>
 
 To access the web application dukes, append "/dukes" at the end of the URL you

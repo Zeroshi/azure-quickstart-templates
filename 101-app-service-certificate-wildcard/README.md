@@ -23,7 +23,7 @@ In order to deploy this template, you need to have the following resources: <br 
 </P>
 
 <P>
-By default, 'Microsoft.CertificateRegistration' and 'Microsoft.Web' RPs don't have access to the Key Vault specified in the template hence you need to authorize these RPs by executing 
+By default, 'Microsoft.CertificateRegistration' and 'Microsoft.Web' RPs don't have access to the Key Vault specified in the template hence you need to authorize these RPs by executing
 the following PowerShell commands before deploying the template: <br />
 
 <I>
@@ -35,7 +35,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName KEY_VAULT_NAME -ServicePrincipalName 
 </P>
 
 <P>
-ServicePrincipalName parameter represents these RPs in user tenant and will remain same for all Azure subscriptions. This is a onetime operation. Once you have a configured a Key Vault property, 
+ServicePrincipalName parameter represents these RPs in user tenant and will remain same for all Azure subscriptions. This is a onetime operation. Once you have a configured a Key Vault property,
 you can use it to store as many App Service Certificates as you want without executing these PowerShell commands again. You can go through the Key Vault documentation for more information: <br />
 https://azure.microsoft.com/en-us/documentation/articles/key-vault-get-started/
 </P>

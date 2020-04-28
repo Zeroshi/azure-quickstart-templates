@@ -22,7 +22,7 @@ Once the deployment is complete you can increase the resources provided to
 SonarQube by changing the VM from a Standard DS1 v2 machine to any larger DS*x*
 v2 machine without the need to redeploy SonarQube or migrate any data.
 
-[License](https://raw.githubusercontent.com/azure/azure-quickstart-templates/master/sonarqube-azuresql/oss/License.txt)  
+[License](https://raw.githubusercontent.com/azure/azure-quickstart-templates/master/sonarqube-azuresql/oss/License.txt)
 [Third Party Notices](https://raw.githubusercontent.com/azure/azure-quickstart-templates/master/sonarqube-azuresql/oss/ThirdPartyNotices.txt)
 
 ### Note
@@ -131,7 +131,7 @@ your SonarQube by entering its public address into a browser. The address format
 is:
 
 http://[sq\_PublicIP\_DnsPrefix].[AzureRegion].cloudapp.azure.com:9000 **Ex:**
-http://my-sonarqube.eastus.cloudapp.azure.com:9000  
+http://my-sonarqube.eastus.cloudapp.azure.com:9000
 **Ex: Secure** https://my-sonarqube.eastus.cloudapp.azure.com
 
 ---

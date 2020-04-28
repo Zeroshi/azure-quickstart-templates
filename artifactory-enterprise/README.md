@@ -73,7 +73,7 @@ considering you have SSL certificate for `*.jfrog.team`
 ### Steps to upgrade Artifactory Version
 
 1. Login into the Primary VM instance as root. Use the admin credentials
-   provided during the installation.  
+   provided during the installation.
    Note: Use the load balancer's NAT entries under Azure resources, to get the
    allocated NAT port for accessing the VM instance.
 
@@ -101,7 +101,7 @@ considering you have SSL certificate for `*.jfrog.team`
 #### Note:
 
 Please check the Azure region support for `Standard Sku` property in load
-balancer for this template to work properly.  
+balancer for this template to work properly.
 Check for SQL server support on specified location. If SQL server is not
 available in the location, Use 'DB_Location' to specify the location with SQL
 server support.

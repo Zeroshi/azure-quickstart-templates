@@ -112,7 +112,7 @@ Guide](https://go.documentation.sas.com/?docsetId=dplyml0phy0lax&docsetTarget=so
 ### Costs and Licenses
 You are responsible for the cost of the Azure services used while running this Quickstart deployment. There is no additional cost for using the Quickstart.
 You will need a SAS license to launch this Quickstart. Your SAS account team and the SAS Enterprise Excellence Center can advise on the appropriate software licensing and sizing to meet workload and performance needs.
-SAS Viya Quickstart Template for Azure creates three instances, including: 
+SAS Viya Quickstart Template for Azure creates three instances, including:
 * 1 compute virtual machine (VM), the Cloud Analytic Services (CAS) controller
 * 1 VM for administration, the Ansible controller
 * 1 VM for the SAS Viya services
@@ -176,7 +176,7 @@ For details, see ["Using Shared Access
 Signatures."](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1)
 
 <a name="Mirror">
-### (Optional) Create a Mirror Repository 
+### (Optional) Create a Mirror Repository
 For your repository, you can do either:
 * Use the default method, which downloads the installation files directly from SAS.
 * Upload an entire mirror to Azure blob storage.
@@ -253,7 +253,7 @@ troubleshooting and performing maintenance tasks:
 | SASBACKUP       | Location for SAS Backup and Recovery Tool backup vault.                                                                                                                                    | _Services VM:_<br>/opt/sas/backups<br>(part of the 256 GB of /opt/sas)                                                                                                                             |
 
 <a name="Post-Deployment">
-## Optional Post-Deployment 
+## Optional Post-Deployment
 <a name="DNS">
  ### Configure a Certificate Authority-Signed Digital Certificate and Custom DNS Name
 
@@ -503,7 +503,7 @@ ssh vmuser@worker02
 If your deployment fails:
 1.	Check to ensure that the location of your license is accessible.
 2.	If you created a mirror, verify that the mirror is correct.
-3.	Review the failed deployment steps and see 
+3.	Review the failed deployment steps and see
 ["Deployment errors"](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-common-deployment-errors#deployment-errors) in the Azure troubleshooting documentation.
 4. If the value of the DeploymentDataLocation is left as *""*, then the Azure resources have been allocated, but SAS Viya has not been installed. You must delete the deployment and redeploy with a valid link to your license.
 For more information, see ["Upload the License Zip file."](#License)
@@ -521,10 +521,10 @@ For more information, see ["Upload the License Zip file."](#License)
 
 <a name="ReviewLog">
 ### Review the Log Files
-Ansible is the primary virtual machine that is used for the installation. Most of the deployment log files reside on the Ansible virtual machine.   
+Ansible is the primary virtual machine that is used for the installation. Most of the deployment log files reside on the Ansible virtual machine.
 #### Ansible Server Log Files:
 The /var/log/sas/install directory is the primary deployment log directory. Other logs follow:
-* runAnsiblePhase*.log files: logs that are produced by the extensions 
+* runAnsiblePhase*.log files: logs that are produced by the extensions
 * install_runner.log: logs that are created by an asynchronous task started in phase 1 and ending in phase 7. Sections of the text are returned as the results in the runAnsiblePhase* logs.
 
 - Commands.log: a listing of the parameters supplied to the Ansible start
@@ -579,7 +579,7 @@ ansible-playbook viya-ark/playbooks/viya-mmsu/viya-services-restart.yml -e enabl
 <a name="UncommonErrors">
 If you encounter the following errors, remove the deployment and redeploy the software again.
 #### SSH Error: data could not be sent to remote host
-This error is the result of issues related to dns/network during some critical times during the build. (In most cases, the system is set to reconnect or retry.). 
+This error is the result of issues related to dns/network during some critical times during the build. (In most cases, the system is set to reconnect or retry.).
 #### Yum repo errors “Error: Package 'package' Requires: 'another package' Available"
 
 This error is the result of RHEL RPM mirrors that are not always correct in
@@ -601,7 +601,7 @@ Create a service account in your LDAP system. The service account must have perm
 <a name="AddAConfigureIdentitiesService">
 ### Configure the Identities Service
 **Note:**   OpenLDAP systems and customized AD setups might require additional configuration that is beyond the scope of this guide.
-* See [Configure the Connection to Your Identity Provider ](https://go.documentation.sas.com/?docsetId=dplyml0phy0lax&docsetTarget=p0dt267jhkqh3un178jzupyyetsa.htm&docsetVersion=3.5&locale=en#n1p4yydj6grbban1kl1te52gv0kf) in the SAS Viya for Linux: Deployment Guide for more information about configuring the identities service. 
+* See [Configure the Connection to Your Identity Provider ](https://go.documentation.sas.com/?docsetId=dplyml0phy0lax&docsetTarget=p0dt267jhkqh3un178jzupyyetsa.htm&docsetVersion=3.5&locale=en#n1p4yydj6grbban1kl1te52gv0kf) in the SAS Viya for Linux: Deployment Guide for more information about configuring the identities service.
 * See [Encrypt LDAP Connections](https://go.documentation.sas.com/?docsetId=calencryptmotion&docsetTarget=n1xdqv1sezyrahn17erzcunxwix9.htm&docsetVersion=3.5&locale=en#p1bai319815977n1bzdyyxr3d5he) in  Encryption in SAS Viya: Data in Motion for more information about securing LDAP connections.
 
 In the SAS Environment Manager, on the Configuration tab, select the Identities
@@ -660,7 +660,7 @@ services machine.
 
 <a name="AddBLoginAndList">
 ### List All Users and Groups
-From the Ansible controller VM, log in to the services VM: 
+From the Ansible controller VM, log in to the services VM:
 ```
 ssh services.viya.sas
 ```
@@ -671,7 +671,7 @@ ldapsearch -x -h localhost -b "dc=sasviya,dc=com"
 ```
 
 <a name="AddBAddUser">
-### Add a User 
+### Add a User
 1.	 Create a user file that contains all the user info:
 
 **Note:** You must increment the UID from the last one displayed by the
@@ -733,9 +733,9 @@ exit
 ```
 
 <a name="AddBPassword">
-### Change or Set a Password 
+### Change or Set a Password
 ```
-ldappasswd -h localhost -s USERPASSWORD -W -D cn=admin,dc=sasviya,dc=com -x "uid=newuser,ou=users,dc=sasviya,dc=com" 
+ldappasswd -h localhost -s USERPASSWORD -W -D cn=admin,dc=sasviya,dc=com -x "uid=newuser,ou=users,dc=sasviya,dc=com"
 ```
 **Note:**    To prevent the command from being saved to the bash history, preface this command with a space. The string following the -x should match the dn: attribute of the user.
 
@@ -748,7 +748,7 @@ ldapdelete –h localhost -W -D "cn=admin,dc=sasviya,dc=com" "uid=newuser,ou=use
 ## Appendix C Security Considerations
 
 <a name="nsc">
-###	Network Security Groups 
+###	Network Security Groups
 SAS Viya Quickstart for Azure uses the following network security groups to control access to the servers and load balancers from sources outside the virtual network. All server to server communication between subnets in the SAS Viya virtual network is permitted.
 
 | Name                                         | Ingress Rules                                                                                          | Egress Rules | Servers/Load Balancers  | Notes                                                                 |
@@ -758,17 +758,17 @@ SAS Viya Quickstart for Azure uses the following network security groups to cont
 | Viya_NetworkSecurityGroup                    | Deny All                                                                                               | Allow All    | Services Controller     | No external connections can be directly made to the SAS Viya servers. |
 
 <a name="hard">
-### Hardening Provided OpenLDAP Security 
+### Hardening Provided OpenLDAP Security
 By default, the OpenLDAP provider is set up if you provide a user password that does not use TLS to secure the communications between the controller and the OpenLDAP server. Most connections should be authenticated by the OAuth provider in SASLogon, which communicates by loopback with the OpenLDAP server. In a production environment, it is recommended that you enable TLS encryption for OpenLDAP queries. For information about enabling LDAPS, refer to the
  [ OpenLDAP documentation.](https://www.openldap.org/doc/admin24/tls.html)
- 
+
  <a name="datasec">
-###		Data Security 
+###		Data Security
 The Quickstart deployment is built to get you "up and running" quickly. However, the deployment trades some security for the assurances that a large quantity of SAS licensed products can be loaded without issue. Before you load highly valuable data, it is recommended that you:
 * Lock down the communication between the servers to allow only those ports that your licensed products are using.
 *  Ensure that the user rights of created users are as minimal as possible.
 <a name="updates">
 ###  Updating the Operating System
 During installation, yum updates servers but will not automatically apply patches after deployment is complete. To apply patches either:
-* Schedule updates on the boxes through cron 
+* Schedule updates on the boxes through cron
 * Regularly log on to the system and run a "yum update" command to keep security patches up to date on the operating system

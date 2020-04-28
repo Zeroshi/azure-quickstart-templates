@@ -23,7 +23,7 @@ In order to deploy this template, you need to have the following resources:  <br
 </P>
 
 <P>
-By default, 'Microsoft.Azure.WebSites' Resource Provider (RP) doesn't have access to the Key Vault specified in the template hence you need to authorize it by executing 
+By default, 'Microsoft.Azure.WebSites' Resource Provider (RP) doesn't have access to the Key Vault specified in the template hence you need to authorize it by executing
 the following PowerShell commands before deploying the template:  <br />
 
 ```PowerShell

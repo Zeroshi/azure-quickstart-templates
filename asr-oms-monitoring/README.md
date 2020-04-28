@@ -75,7 +75,7 @@ Log Analytics workspace in the same Resource Group
 
 ![alt text](images/knrg.png "Resource Group")
 
-###You can now deploy the template  
+###You can now deploy the template
 [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2Fasr-oms-monitoring%2F%2Fazuredeploy.json)
 
 This will send you to the Azure Portal with some default values for the template
@@ -127,7 +127,7 @@ the Automation account
 
 ![alt text](images/knautorg.png "RG")
 
-###You can now deploy the template  
+###You can now deploy the template
 [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2Fasr-oms-monitoring%2F%2Fazuredeploy.json)
 
 This will send you to the Azure Portal with some default values for the template

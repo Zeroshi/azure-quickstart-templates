@@ -160,7 +160,7 @@ lightweight agents and send data from hundreds or thousands of machines to
 Logstash or Elasticsearch. ELK allows Filebeat, Packetbeat, Metricbeat and
 Winlogbeat to ship log data from client servers.
 
-**Filebeat** : For Text log files.  
+**Filebeat** : For Text log files.
 **Metricbeat** : For OS and application. **Packetbeat** : For Network
 monitoring. **Winlogbeat** : For windows event logs.
 

@@ -19,20 +19,20 @@ Click the button below to deploy:
 
 <br><br>
 
-This Template allows you configure certificates in an RDS deployment.  
+This Template allows you configure certificates in an RDS deployment.
 Remote Desktop Services require certificaties for server authentication, single
-sign-on (SSO), and to secure RDP connections.  
+sign-on (SSO), and to secure RDP connections.
  For a good overview of certificates use in RDS see [Configuring RDS 2012 Certificates and SSO](https://ryanmangansitblog.com/2013/03/10/configuring-rds-2012-certificates-and-sso/)
 and [How to Create a (Mostly) Seamless Logon Experience For Your Remote Desktop Services Environment](http://www.rdsgurus.com/windows-2012-r2-how-to-create-a-mostly-seamless-logon-experience-for-your-remote-desktop-services-environment/)
 by RDS MVP Toby Phipps.
 
 The Template makes use of a single SSL certificate. The certificate's Subject
-Name must match external DNS name of RD Gateway server in the deployment.  
+Name must match external DNS name of RD Gateway server in the deployment.
 The certificate with the private key (in .PFX format) must be stored in Azure
-Key Vault.  
+Key Vault.
 For information on managing certificates with Azure Key Vault see:
 [Get started with Azure Key Vault certificates](https://blogs.technet.microsoft.com/kv/2016/09/26/get-started-with-azure-key-vault-certificates/)
-and  
+and
 [Manage certificates via Azure Key Vault](https://blogs.technet.microsoft.com/kv/2016/09/26/manage-certificates-via-azure-key-vault/).
 
 ## Pre-Requisites

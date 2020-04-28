@@ -38,10 +38,10 @@ Pipeline: Copy Activity -> HDInsight Activity -> Copy Activity
 7. Upload **input.txt** file from the script folder to a folder named
    **incomingfiles** on the FTP server.
 8. Add parameters to the azuredeploy.parameters.json\*\* file and specify values
-   for them.  
+   for them.
     "ftpHost": { "value": "<your FTP server name or IP address>" }, "ftpUser": {
    "value": "<FTP user name>" }, "ftpPassword": { "value": "<FTP password>" }, "ftpFolderName":
-   { "value": "incomingfiles" }, "ftpFileName": { "value": "input.txt" },  
+   { "value": "incomingfiles" }, "ftpFileName": { "value": "input.txt" },
     "storageAccountResourceGroupName": { "value":
    "<Resource group of your Azure Storae account>" }, "storageAccountName": {
    "<Azure Storage account name>": "" }, "storageAccountKey": { "value":

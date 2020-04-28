@@ -34,7 +34,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName KEY_VAULT_NAME -ServicePrincipalName 
 </I>
 
 <P>
-ServicePrincipalName parameter represents these RPs in user tenant and will remain same for all Azure subscriptions. This is a onetime operation. Once you have a configured a Key Vault properly, 
+ServicePrincipalName parameter represents these RPs in user tenant and will remain same for all Azure subscriptions. This is a onetime operation. Once you have a configured a Key Vault properly,
 you can use it to store as many App Service Certificates as you want without executing these PowerShell commands again.You can go through the Key Vault documentation for more information:
 https://azure.microsoft.com/en-us/documentation/articles/key-vault-get-started/
 </P>
