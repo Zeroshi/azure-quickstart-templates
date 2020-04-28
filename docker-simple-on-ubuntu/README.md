@@ -10,12 +10,10 @@
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/docker-simple-on-ubuntu/CredScanResult.svg)
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2Fdocker-simple-on-ubuntu%2Fazuredeploy.json" target="_blank">
-    
+
 
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2Fdocker-simple-on-ubuntu%2Fazuredeploy.json" target="_blank">
-    
 
-
-This template allows you to deploy an Ubuntu VM with Docker (using the Docker Extension) installed.
-You can run `docker` commands by connecting to the virtual machine with SSH.
-
+This template allows you to deploy an Ubuntu VM with Docker (using the Docker
+Extension) installed. You can run `docker` commands by connecting to the virtual
+machine with SSH.

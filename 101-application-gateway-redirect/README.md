@@ -9,14 +9,11 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-application-gateway-redirect/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-application-gateway-redirect/CredScanResult.svg)
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-application-gateway-redirect%2Fazuredeploy.json")  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-application-gateway-redirect%2Fazuredeploy.json")
-    
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-application-gateway-redirect%2Fazuredeploy.json")
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-application-gateway-redirect%2Fazuredeploy.json")
 
-
-    
-
-
-This template illustrates different redirect scenarios Application Gateway supports:
+This template illustrates different redirect scenarios Application Gateway
+supports:
 
 1. Redirect http requests to https.
 2. Redirect requests to a fixed url.
@@ -24,15 +21,16 @@ This template illustrates different redirect scenarios Application Gateway suppo
 
 This functionality can be configured using RedirectConfiguration.
 
-| Property | Mandatory | Description |
-|---|---|---|
-| RedirectType | Y | Supported http redirection types - Permanent, Temporary, Found, SeeOther |
-| TargetListener | N | Reference to a listener to redirect the request to. |
-| TargetUrl | N | A Url to redirect to. Cannot be used when TargetListener is specified.|
-| IncludePath | N | True/False.|
-| IncludeQueryString | N | True/False |
+| Property           | Mandatory | Description                                                              |
+| ------------------ | --------- | ------------------------------------------------------------------------ |
+| RedirectType       | Y         | Supported http redirection types - Permanent, Temporary, Found, SeeOther |
+| TargetListener     | N         | Reference to a listener to redirect the request to.                      |
+| TargetUrl          | N         | A Url to redirect to. Cannot be used when TargetListener is specified.   |
+| IncludePath        | N         | True/False.                                                              |
+| IncludeQueryString | N         | True/False                                                               |
 
 ### Sample Redirect Configuration
+
 ```
 {
     "redirectConfigurations": [
@@ -48,9 +46,12 @@ This functionality can be configured using RedirectConfiguration.
     ]
 }
 ```
-A RedirectConfiguration can be associated with either a listener in a basic rule, Or a Pathrule in UrlPathMap.
+
+A RedirectConfiguration can be associated with either a listener in a basic
+rule, Or a Pathrule in UrlPathMap.
 
 ### Sample Configuration with Basic Rule
+
 ```
 {
     "requestRoutingRules": [
@@ -71,6 +72,7 @@ A RedirectConfiguration can be associated with either a listener in a basic rule
 ```
 
 ### Sample Configuration with UrlPathMap
+
 ```
 {
     "urlPathMaps": [
@@ -100,6 +102,5 @@ A RedirectConfiguration can be associated with either a listener in a basic rule
 ```
 
 ### Notes:
+
 Supported apiVersion to use http redirect feature is "2017-04-01" and above.
-
-

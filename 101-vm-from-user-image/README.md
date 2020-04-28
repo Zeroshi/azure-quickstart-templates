@@ -9,20 +9,21 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-vm-from-user-image/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-vm-from-user-image/CredScanResult.svg)
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-from-user-image%2Fazuredeploy.json")  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-from-user-image%2Fazuredeploy.json")
-    
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-from-user-image%2Fazuredeploy.json")
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-from-user-image%2Fazuredeploy.json")
 
+> Prerequisite - The generalized image VHD should exist, as well as a Storage
+> Account for boot diagnostics
 
-    
+This template allows you to create a Virtual Machine from an unmanaged User
+image vhd. This template also deploys a Virtual Network, Public IP addresses and
+a Network Interface.
 
-
-> Prerequisite - The generalized image VHD should exist, as well as a Storage Account for boot diagnostics
-
-This template allows you to create a Virtual Machine from an unmanaged User image vhd. This template also deploys a Virtual Network, Public IP addresses and a Network Interface.
-
-If you are looking to accomplish the above scenario through PowerShell instead of a template, you can use a PowerShell script like below
+If you are looking to accomplish the above scenario through PowerShell instead
+of a template, you can use a PowerShell script like below
 
 ##### Variables
+
     ## Global
     $rgName = "testrg"
     $location = "westus"
@@ -45,18 +46,22 @@ If you are looking to accomplish the above scenario through PowerShell instead o
     $osDiskName = $vmName + "osDisk"
 
 ##### Resource Group
+
     New-AzureRmResourceGroup -Name $rgName -Location $location
 
 ##### Storage
+
     $storageacc = New-AzureRmStorageAccount -ResourceGroupName $rgName -Name $storageName -Type $storageType -Location $location
 
 ##### Network
+
     $pip = New-AzureRmPublicIpAddress -Name $nicname -ResourceGroupName $rgName -Location $location -AllocationMethod Dynamic
     $subnetconfig = New-AzureRmVirtualNetworkSubnetConfig -Name $subnet1Name -AddressPrefix $vnetSubnetAddressPrefix
     $vnet = New-AzureRmVirtualNetwork -Name $vnetName -ResourceGroupName $rgName -Location $location -AddressPrefix $vnetAddressPrefix -Subnet $subnetconfig
     $nic = New-AzureRmNetworkInterface -Name $nicname -ResourceGroupName $rgName -Location $location -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $pip.Id
 
 ##### Compute
+
     ## Setup local VM object
     $cred = Get-Credential
     $vm = New-AzureRmVMConfig -VMName $vmName -VMSize $vmSize
@@ -74,4 +79,3 @@ If you are looking to accomplish the above scenario through PowerShell instead o
 
     ## Create the VM in Azure
     New-AzureRmVM -ResourceGroupName $rgName -Location $location -VM $vm -Verbose
-

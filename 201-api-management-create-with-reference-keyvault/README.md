@@ -10,13 +10,10 @@
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/201-api-management-create-with-reference-keyvault/CredScanResult.svg)
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2F201-api-management-create-with-reference-keyvault%2Fazuredeploy.json" target="_blank">
-    
 
-
-    
-
-
-This template shows an example of how to deploy an Azure API Management service with SSL Certificate from [KeyVault as Resource Manager Reference]((https://azure.microsoft.com/en-us/documentation/articles/resource-manager-keyvault-parameter/).
+This template shows an example of how to deploy an Azure API Management service
+with SSL Certificate from [KeyVault as Resource Manager
+Reference]((https://azure.microsoft.com/en-us/documentation/articles/resource-manager-keyvault-parameter/).
 
 <P>
 In order to deploy this template, you need to have the following resources: <br />
@@ -26,6 +23,7 @@ In order to deploy this template, you need to have the following resources: <br 
 </P>
 
 PowerShell script to upload certificate into a Key Vault Secret:
+
 ```Powershell
 $pfxFilePath = "PFX_CERTIFICATE_FILE_PATH" # Change this path
 $pwd = "PFX_CERTIFICATE_PASSWORD"  # Change this password
@@ -39,4 +37,3 @@ $secret = ConvertTo-SecureString -String $fileContentEncoded -AsPlainText –For
 $secretContentType = 'application/x-pkcs12'
 Set-AzureKeyVaultSecret -VaultName KEY_VAULT_NAME -Name KEY_VAULT_SECRET_NAME -SecretValue $Secret -ContentType $secretContentType # Change Key Vault name and Secret name
 ```
-

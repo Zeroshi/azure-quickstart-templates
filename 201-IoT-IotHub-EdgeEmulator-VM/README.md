@@ -11,13 +11,11 @@
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-IoT-IotHub-EdgeEmulator-vm%2Fazuredeploy.json" target="_blank">
 
-
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-IoT-IotHub-EdgeEmulator-vm%2Fazuredeploy.json" target="_blank">
 
-
-
-The purpose of this ARM Template is **deploy an IoT Hub** with an **Ubuntu Edge Simulator**.
-The Linux Ubuntu virtual machine is configured to be an IoT Edge device
+The purpose of this ARM Template is **deploy an IoT Hub** with an **Ubuntu Edge
+Simulator**. The Linux Ubuntu virtual machine is configured to be an IoT Edge
+device
 
 For this task you will:
 

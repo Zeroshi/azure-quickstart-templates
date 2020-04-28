@@ -1,4 +1,4 @@
-# Octopus Deploy Tentacle Agent (Windows) 
+# Octopus Deploy Tentacle Agent (Windows)
 
 ![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/octopus-deploy-tentacle-windows/PublicLastTestDate.svg)
 ![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/octopus-deploy-tentacle-windows/PublicDeployment.svg)
@@ -15,7 +15,6 @@
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-octopus-deploy-tentacle-windows%2Fazuredeploy.json" target="_blank">
 <img src="images/visualizebutton.png"/>
 
-
 To deploy this template using the scripts from the root of this repo:
 
 ```PowerShell
@@ -26,7 +25,10 @@ To deploy this template using the scripts from the root of this repo:
 azure-group-deploy.sh -a 101-octopus-deploy-tentacle-windows -l eastus -u
 ```
 
-This template deploys a Virtual Machine with an Octopus Deploy Tentacle. The Tentacle is an agent which accepts commands from your Octopus Server, allowing you to deploy applications, update configuration files, create IIS web sites and application pools, install windows services, and a whole lot more.
+This template deploys a Virtual Machine with an Octopus Deploy Tentacle. The
+Tentacle is an agent which accepts commands from your Octopus Server, allowing
+you to deploy applications, update configuration files, create IIS web sites and
+application pools, install windows services, and a whole lot more.
 
 `Tags: OctopusDeploy, Deployment, Tentacle`
 
@@ -45,15 +47,20 @@ The following resources are deployed as part of the solution
 
 ## Prerequisites
 
-You will need an Octopus Deploy server, contactable from Azure. If you do not yet have one, you can use create one in Azure via [the marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/octopus.octopusdeploy?tab=Overview).
+You will need an Octopus Deploy server, contactable from Azure. If you do not
+yet have one, you can use create one in Azure via
+[the marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/octopus.octopusdeploy?tab=Overview).
 
 ## Deployment steps
 
-You can click the "deploy to Azure" button at the beginning of this document or follow the instructions for command line deployment using the scripts in the root of this repo.
+You can click the "deploy to Azure" button at the beginning of this document or
+follow the instructions for command line deployment using the scripts in the
+root of this repo.
 
 ## Usage
 
 ### Connect
 
-Once the extension has installed, your Tentacle will be available in the Environments page of your Octopus Server, and you will be able to deploy projects to it.
-
+Once the extension has installed, your Tentacle will be available in the
+Environments page of your Octopus Server, and you will be able to deploy
+projects to it.

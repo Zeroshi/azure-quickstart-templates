@@ -11,10 +11,13 @@
 
 ## DESCRIPTION
 
-This template deploys requested number of A2 size Windows Server 2012R2 VMs and a controller VM with public IP address in same virtual network. Controller VM turn-off all VMs then boot them simultaneously to measure an average and end-to-end VM boot time.
+This template deploys requested number of A2 size Windows Server 2012R2 VMs and
+a controller VM with public IP address in same virtual network. Controller VM
+turn-off all VMs then boot them simultaneously to measure an average and
+end-to-end VM boot time.
 
-For controller VM to manage all VMs, Azure SPN needs to be configured using instructions given below.
-
+For controller VM to manage all VMs, Azure SPN needs to be configured using
+instructions given below.
 
 ## AZURE SPN CONFIGURATION
 
@@ -52,13 +55,13 @@ New-AzureRmRoleAssignment -RoleDefinitionName Owner -ServicePrincipalName $azure
 
 ## RESULTS
 
-VM bootstorm results file is uploaded to Unique Azure Storage Account ('uniqueStorageAccountName' parameter provided by you) as a blob with name 'VMBootAllResult.log.ps1.zip'
+VM bootstorm results file is uploaded to Unique Azure Storage Account
+('uniqueStorageAccountName' parameter provided by you) as a blob with name
+'VMBootAllResult.log.ps1.zip'
 
 ## DEPLOY
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzureStack-QuickStart-Templates%2Fmaster%2Fbootstorm-vm-boot-time%2Fazuredeploy.json" target="_blank">
-    
-
 
 ## PARAMETERS
 
@@ -83,4 +86,3 @@ VM Count: <Choose number of VMs to deploy>
 
 VM OS Sku: <Choose version of Windows to deploy>
 ```
-

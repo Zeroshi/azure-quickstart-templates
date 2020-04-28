@@ -10,15 +10,12 @@
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/201-web-app-sql-database/CredScanResult.svg)
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2F201-web-app-sql-database%2Fazuredeploy.json" target="_blank">
-    
 
+This sample creates a free Azure Web App and SQL Database at the "Basic" service
+level. The template can support other tiers of service, details for each service
+can be found here:
 
-    
-
-
-This sample creates a free Azure Web App and SQL Database at the "Basic" service level.  The template can support other tiers of service, details for each service can be found here:
-
-### Microsoft App Services 
+### Microsoft App Services
 
 - [App Service Pricing](https://azure.microsoft.com/pricing/details/app-service/)
 
@@ -26,7 +23,8 @@ This sample creates a free Azure Web App and SQL Database at the "Basic" service
 
 - [SQL Database Pricing](https://azure.microsoft.com/pricing/details/sql-database/)
 
-For more information about using this template, see [Provision a web app with a SQL Database](https://azure.microsoft.com/documentation/articles/app-service-web-arm-with-sql-database-provision/).
+For more information about using this template, see
+[Provision a web app with a SQL Database](https://azure.microsoft.com/documentation/articles/app-service-web-arm-with-sql-database-provision/).
 
 ### Microsoft Learn Resources
 

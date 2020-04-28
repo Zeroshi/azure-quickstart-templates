@@ -9,13 +9,12 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-vm-ubuntu-DSVM-GPU-or-CPU/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-vm-ubuntu-DSVM-GPU-or-CPU/CredScanResult.svg)
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-ubuntu-DSVM-GPU-or-CPU%2Fazuredeploy.json")  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-ubuntu-DSVM-GPU-or-CPU%2Fazuredeploy.json")
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-ubuntu-DSVM-GPU-or-CPU%2Fazuredeploy.json")
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-ubuntu-DSVM-GPU-or-CPU%2Fazuredeploy.json")
 
-
-
-
-
-This template deploys a **Linux VM Ubuntu with data science tools**. This will deploy a CPU or GPU based VM in the resource group location and will return the admin user name, Virtual Network Name, Network Security Group Name and FQDN.  
+This template deploys a **Linux VM Ubuntu with data science tools**. This will
+deploy a CPU or GPU based VM in the resource group location and will return the
+admin user name, Virtual Network Name, Network Security Group Name and FQDN.
 
 If you are new to Azure virtual machines, see:
 
@@ -34,13 +33,15 @@ If you are new to template deployment, see:
 
 ### Connect
 
-You have two different ways to connect to the DSVM. You can connect to the solution via SSH or using the X2Go Client.
+You have two different ways to connect to the DSVM. You can connect to the
+solution via SSH or using the X2Go Client.
 
 #### Connecting via SSH
 
 You can connect to your virtual machine using SSH.
 
-First, go to your resource (the VM) and click on connect. After that, go to the SSH tab. Finally, copy the command to connect to the VM.
+First, go to your resource (the VM) and click on connect. After that, go to the
+SSH tab. Finally, copy the command to connect to the VM.
 
 ![Screen](./images/connect-ssh.png)
 
@@ -48,23 +49,28 @@ Now, open any **bash terminal** and paste the command.
 
 ![Screen](./images/connect-ssh2.png)
 
-It will ask you to type your password. After that, you will be connected to the VM:
+It will ask you to type your password. After that, you will be connected to the
+VM:
 
 ![Screen](./images/connect-ssh3.png)
 
 #### Connecting via X2Go Client
 
-You can connect to your virtual machine using the X2Go Client. If you don't have the program, you can download it from [here](https://wiki.x2go.org/doku.php/doc:installation:x2goclient).
+You can connect to your virtual machine using the X2Go Client. If you don't have
+the program, you can download it from
+[here](https://wiki.x2go.org/doku.php/doc:installation:x2goclient).
 
 Then, go to your resource, and copy the virtual machine's public IP address.
 
 ![Screen](./images/connect-x2go.png)
 
-Now, it's time to open the X2Go client. If the "New Session" window does not pop up automatically, go to Session -> New Session.
+Now, it's time to open the X2Go client. If the "New Session" window does not pop
+up automatically, go to Session -> New Session.
 
 ![Screen](./images/connect-x2go2.png)
 
-On the resulting configuration window, enter the following configuration parameters on the session tab:
+On the resulting configuration window, enter the following configuration
+parameters on the session tab:
 
 - Host: Enter the IP address of your VM.
 - Login: Enter the username of the Linux VM.
@@ -73,11 +79,13 @@ On the resulting configuration window, enter the following configuration paramet
 
 ![Screen](./images/connect-x2go3.png)
 
-Then, click [Ok]. You will see your VM added to the right of the X2Go window. Click on the box of your VM to bring up the log-in screen. 
+Then, click [Ok]. You will see your VM added to the right of the X2Go window.
+Click on the box of your VM to bring up the log-in screen.
 
 ![Screen](./images/connect-x2go4.png)
 
-Then enter the password and select [Ok]. You may have to give X2Go permission to bypass your firewall to finish connecting.
+Then enter the password and select [Ok]. You may have to give X2Go permission to
+bypass your firewall to finish connecting.
 
 ![Screen](./images/connect-x2go5.png)
 
