@@ -14,5 +14,5 @@
 
     <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true" />
 
-This template demostrates use of pfx certificate from keyvault in Azure batch service.
-
+This template demostrates use of pfx certificate from keyvault in Azure batch
+service.

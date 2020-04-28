@@ -14,7 +14,6 @@
 <a href="http://armviz.io/#/?load=https://github.com/Azure/azure-quickstart-templates/tree/master/101-webapp-basic-windows/azuredeploy.json" target="_blank">
 
 ## Description
-This template allows you to deploy an app service plan and a basic Windows web app. 
 
-
-
+This template allows you to deploy an app service plan and a basic Windows web
+app.

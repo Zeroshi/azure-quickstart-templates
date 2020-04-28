@@ -13,6 +13,5 @@
 
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-servicebus-create-queue-autoforwarding%2Fazuredeploy.json" target="_blank">
 
-For information about using this template, see [Create a Service Bus namespace and a Queues with auto forwarding using an ARM template](http://azure.microsoft.com/documentation/articles/service-bus-resource-manager-namespace-queue/).
-
-
+For information about using this template, see
+[Create a Service Bus namespace and a Queues with auto forwarding using an ARM template](http://azure.microsoft.com/documentation/articles/service-bus-resource-manager-namespace-queue/).

@@ -9,34 +9,47 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/azmgmt-demo/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/azmgmt-demo/CredScanResult.svg)
 
->Note: The purpose of these templates, is to give you a kick-start, instantiating all of the Azure mgmt services in Azure.
-The mgmt. services will be fully integrated, and you will have VM workloads (Windows or Linux) which will be attached - and fully managed as part of the deployment.
-**Please note that this sample is for demo purposes only**
+> Note: The purpose of these templates, is to give you a kick-start,
+> instantiating all of the Azure mgmt services in Azure. The mgmt. services will
+> be fully integrated, and you will have VM workloads (Windows or Linux) which
+> will be attached - and fully managed as part of the deployment. **Please note
+> that this sample is for demo purposes only**
 
 ## What is being deployed
 
 ### Management services and artifacts
 
-* Azure Log Analytics
+- Azure Log Analytics
 
-A workspace is being created, with sample datasources for both Windows and Linux, together with multiple OMS solutions.
+A workspace is being created, with sample datasources for both Windows and
+Linux, together with multiple OMS solutions.
 
-* Azure Automation
+- Azure Automation
 
-The automation account will include several DSC configurations, centered on management scenarios, such as keeping the OMS agent healthy and running, as well as deploying the ASR mobility agent. A PowerShell runbook is also created, which can iterate through the subscription to enable backup on unprotected virtual machines.
+The automation account will include several DSC configurations, centered on
+management scenarios, such as keeping the OMS agent healthy and running, as well
+as deploying the ASR mobility agent. A PowerShell runbook is also created, which
+can iterate through the subscription to enable backup on unprotected virtual
+machines.
 
-* Recovery Services
+- Recovery Services
 
-A recovery vault - to support both Azure 2 Azure DR protection, as well as IaaS backup. The automation account also includes multiple Runbooks that can be used as part of Recovery Plans for ASR.
+A recovery vault - to support both Azure 2 Azure DR protection, as well as IaaS
+backup. The automation account also includes multiple Runbooks that can be used
+as part of Recovery Plans for ASR.
 
 ### IaaS workload
 
-You can specify the amount of virtual machines you want to create (1-10), where all the machines will be connected, protected, and attached to the management services.
+You can specify the amount of virtual machines you want to create (1-10), where
+all the machines will be connected, protected, and attached to the management
+services.
 
 ## How to deploy
 
-These templates should be deployed using PowerShell, as you need to create two resource groups prior to submitting the deployment.
-The guidance below shows a sample script, where you only have to provide your unique values to the variables.
+These templates should be deployed using PowerShell, as you need to create two
+resource groups prior to submitting the deployment. The guidance below shows a
+sample script, where you only have to provide your unique values to the
+variables.
 
 ```powershell
 
@@ -71,9 +84,8 @@ New-AzureRmResourceGroupDeployment -Name $deploymentName `
                                    -Verbose
 ```
 
-Navigate to [Azure Portal](https://portal.azure.com) and find the newly created dashboard, which will have the following naming convention *AzureMgmt(uniqueString(deployment().name))*:
+Navigate to [Azure Portal](https://portal.azure.com) and find the newly created
+dashboard, which will have the following naming convention
+_AzureMgmt(uniqueString(deployment().name))_:
 
 ![media](./images/dashboard-new.png)
-
-
-

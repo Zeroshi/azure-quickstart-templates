@@ -11,6 +11,5 @@
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2F101-redis-cache%2Fazuredeploy.json" target="_blank">
 
-For information about using this template, see [Create a Redis Cache using a template](https://azure.microsoft.com/en-us/documentation/articles/cache-redis-cache-arm-provision/).
-
-
+For information about using this template, see
+[Create a Redis Cache using a template](https://azure.microsoft.com/en-us/documentation/articles/cache-redis-cache-arm-provision/).

@@ -9,18 +9,25 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/201-reserved-ip/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/201-reserved-ip/CredScanResult.svg)
 
-This template demonstrates the currently supported use case for Reserved IP.  A Reserved IP is simply a statically allocated Public IP.  
+This template demonstrates the currently supported use case for Reserved IP. A
+Reserved IP is simply a statically allocated Public IP.
 
-There is currently only one supported use case: assign a Reserved IP to the front end of the Azure Load Balancer.  
+There is currently only one supported use case: assign a Reserved IP to the
+front end of the Azure Load Balancer.
 
-This template goes one step further: it both creates a new Reserved IP and assigns it to a load balancer and it uses a previously existing Reserved IP and assigns it to a separate load balancer.
+This template goes one step further: it both creates a new Reserved IP and
+assigns it to a load balancer and it uses a previously existing Reserved IP and
+assigns it to a separate load balancer.
 
 # Parameters
 
-Three parameters are needed in support of the "previously existing Reserved IP" use case:
+Three parameters are needed in support of the "previously existing Reserved IP"
+use case:
 
-1. existingRIPSubId - subscription ID of the subscription with the previously existing Reserved IP
-2. existingRIPResourceGroupName - name of the resource group with the previously existing Reserved IP
+1. existingRIPSubId - subscription ID of the subscription with the previously
+   existing Reserved IP
+2. existingRIPResourceGroupName - name of the resource group with the previously
+   existing Reserved IP
 3. existingRIPName - name of the previously existing Reserved IP
 
 # How to Create 'Existing' Reserved IP
@@ -31,11 +38,9 @@ Three parameters are needed in support of the "previously existing Reserved IP" 
 
 2. Create a statically allocated PIP in that RG
 
-`New-AzurePublicIpAddress -ResourceGroupName ExistingReservedIPRG -Name goliveRIP -Location 'West US'`  
+`New-AzurePublicIpAddress -ResourceGroupName ExistingReservedIPRG -Name goliveRIP -Location 'West US'`
 
 This step is mandatory for the template to work as designed.
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-reserved-ip%2Fazuredeploy.json")  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-reserved-ip%2Fazuredeploy.json")
-
-
-
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-reserved-ip%2Fazuredeploy.json")
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-reserved-ip%2Fazuredeploy.json")

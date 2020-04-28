@@ -9,24 +9,27 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-rbac-builtinrole-resourcegroup/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-rbac-builtinrole-resourcegroup/CredScanResult.svg)
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-rbac-builtinrole-resourcegroup%2Fazuredeploy.json")  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-rbac-builtinrole-resourcegroup%2Fazuredeploy.json")
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-rbac-builtinrole-resourcegroup%2Fazuredeploy.json")
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-rbac-builtinrole-resourcegroup%2Fazuredeploy.json")
 
-  
-
-This template assigns Owner, Reader or Contributor access to an existing resource group. Inputs to this template are following fields:
+This template assigns Owner, Reader or Contributor access to an existing
+resource group. Inputs to this template are following fields:
 
 - Principal ID
 - Role Definition ID
 
-**Use the following Azure PowerShell cmdlet to get Principal ID associated with a user using their email id. Please note, principal id maps to the id inside the directory and can point to a user, service principal, or security group. The ObjectId is the principal ID.
+\*\*Use the following Azure PowerShell cmdlet to get Principal ID associated
+with a user using their email id. Please note, principal id maps to the id
+inside the directory and can point to a user, service principal, or security
+group. The ObjectId is the principal ID.
 
     PS C:\> Get-AzADUser -mail <email id>
-    
+
     DisplayName                    Type                           ObjectId
     -----------                    ----                           --------
     <NAME>                                                        xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-**Use the following Azure PowerShell cmdlet to learn about role definitions.
+\*\*Use the following Azure PowerShell cmdlet to learn about role definitions.
 
     PS C:\> Get-AzRoleDefinition -Name "reader"
 
@@ -40,7 +43,8 @@ This template assigns Owner, Reader or Contributor access to an existing resourc
     NotDataActions   : {}
     AssignableScopes : {/}
 
-   You can use the same cmdlet to get the role definition ID for owner and contributor.
+You can use the same cmdlet to get the role definition ID for owner and
+contributor.
 
     "Owner": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
     "Contributor": "b24988ac-6180-42a0-ab88-20f7382dd24c"
@@ -57,6 +61,5 @@ If you are new to the template development, see:
 - [Azure Resource Manager documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
 - [Create resource groups and resources at the subscription level](https://docs.microsoft.com/azure/azure-resource-manager/deploy-to-subscription#create-roles)
 
-Tags: RBAC for Azure resources, role-based access control, Resource Manager, Resource Manager templates, ARM templates
-
-
+Tags: RBAC for Azure resources, role-based access control, Resource Manager,
+Resource Manager templates, ARM templates

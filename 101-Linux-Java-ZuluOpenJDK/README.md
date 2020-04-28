@@ -18,22 +18,28 @@
 
 ## Overview
 
-This template deploys a Linux VM with the Azul Zulu for Azure - Enterprise Edition, a supported OpenJDK JVM from Azul.<br/>
-The VM can be configured using new or existing resources for Storage, the Virtual Network and Public IP Address.<br/>
-Authentication can be done using an sshPublicKey or a Password.
+This template deploys a Linux VM with the Azul Zulu for Azure - Enterprise
+Edition, a supported OpenJDK JVM from Azul.<br/> The VM can be configured using
+new or existing resources for Storage, the Virtual Network and Public IP
+Address.<br/> Authentication can be done using an sshPublicKey or a Password.
 
-Choices for the Linux OS are Ubuntu 20.04-LTS, Ubuntu 18.04-LTS, Debian 10, Debian 9, or CentOS 8.1.<br/>
-The default is Ubuntu 20.04-LTS.
+Choices for the Linux OS are Ubuntu 20.04-LTS, Ubuntu 18.04-LTS, Debian 10,
+Debian 9, or CentOS 8.1.<br/> The default is Ubuntu 20.04-LTS.
 
-Choices for the Zulu OpenJDK JVM are the JDK, JRE, or Headless JRE for the latest release of Java 7, 8, 11, or 13.<br/>
-The default is the Zulu Java 8 JDK.
+Choices for the Zulu OpenJDK JVM are the JDK, JRE, or Headless JRE for the
+latest release of Java 7, 8, 11, or 13.<br/> The default is the Zulu Java 8 JDK.
 
-The VM is deployed in the resource group location by default using the latest patched version of the Linux distribution and a Standard_D2s_v3 size VM as the default value.
+The VM is deployed in the resource group location by default using the latest
+patched version of the Linux distribution and a Standard_D2s_v3 size VM as the
+default value.
 
-The Zulu install script using apt is available [here.](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-Linux-Java-ZuluOpenJDK/scripts/apt-zulu-install.sh)
-The Zulu install script using yum is available [here.](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-Linux-Java-ZuluOpenJDK/scripts/yum-zulu-install.sh)
+The Zulu install script using apt is available
+[here.](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-Linux-Java-ZuluOpenJDK/scripts/apt-zulu-install.sh)
+The Zulu install script using yum is available
+[here.](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-Linux-Java-ZuluOpenJDK/scripts/yum-zulu-install.sh)
 
 **Related Templates**
+
 - [101-Windows-Java-ZuluOpenJDK](https://github.com/Azure/azure-quickstart-templates/tree/master/101-Windows-Java-ZuluOpenJDK)
 
 **If you are new to the Azul Zulu OpenJDK JVM, see:**
@@ -59,4 +65,4 @@ The Zulu install script using yum is available [here.](https://raw.githubusercon
 
 - [Azure Resource Manager documentation](https://docs.microsoft.com/azure/azure-resource-manager/)
 
-`Tags: Linux, Ubuntu, Debian, CentOS, Java, Zulu, OpenJDK`  
+`Tags: Linux, Ubuntu, Debian, CentOS, Java, Zulu, OpenJDK`

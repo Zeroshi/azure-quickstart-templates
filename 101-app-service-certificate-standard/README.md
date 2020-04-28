@@ -15,12 +15,16 @@
 For more details on creating an App Service Certificate see [How to Create an App Service Certificate](https://azure.microsoft.com/en-us/documentation/articles/web-sites-purchase-ssl-web-site/).
 </P>
 
-In order to deploy this template, you need to have the following resources: <br />
+In order to deploy this template, you need to have the following resources:
+<br />
+
 1. A Key Vault (specified in 'existingKeyVaultId' parameter) <br />
 2. An App Service App (specified in 'existingAppName' parameter) <br />
 
-By default, 'Microsoft.CertificateRegistration' and 'Microsoft.Web' RPs don't have access to the Key Vault specified in the template hence you need to authorize these RPs by executing 
-the following PowerShell commands before deploying the template:  <br />
+By default, 'Microsoft.CertificateRegistration' and 'Microsoft.Web' RPs don't
+have access to the Key Vault specified in the template hence you need to
+authorize these RPs by executing the following PowerShell commands before
+deploying the template: <br />
 
 <I>
 Login-AzureRmAccount  <br />
@@ -39,5 +43,3 @@ https://azure.microsoft.com/en-us/documentation/articles/key-vault-get-started/
 The Web App should be in the same resource group with 'rootHostName' and www subdomain assigned as custom domains.
 https://azure.microsoft.com/en-us/documentation/articles/web-sites-custom-domain-name/
 </P>
-
-

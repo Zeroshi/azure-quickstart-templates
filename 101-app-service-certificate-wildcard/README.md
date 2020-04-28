@@ -44,5 +44,3 @@ The Web App and domain resources need to be in the same resource group. The Web 
 https://azure.microsoft.com/en-us/documentation/articles/custom-dns-web-site-buydomains-web-app/ <br />
 https://azure.microsoft.com/en-us/documentation/articles/web-sites-custom-domain-name/ <br />
 </p>
-
-

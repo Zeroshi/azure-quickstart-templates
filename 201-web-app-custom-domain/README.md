@@ -14,5 +14,3 @@
 <P>
 Before deploying this template, you should create the required DNS record for adding custom hostname as described <a href="https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-custom-domain-name">here
 </P>
-
-

@@ -14,6 +14,8 @@
 <a href="http://armviz.io/#/?load=https://github.com/Azure/azure-quickstart-templates/tree/master/101-app-service-regional-vnet-integration/azuredeploy.json" target="_blank">
 
 ## Description
-This template allows you to deploy an app service plan and a basic Windows web app, with [regional VNet integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration) enabled to a newly created virtual network. 
 
-
+This template allows you to deploy an app service plan and a basic Windows web
+app, with
+[regional VNet integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration)
+enabled to a newly created virtual network.
