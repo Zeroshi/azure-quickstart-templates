@@ -17,7 +17,7 @@
 
  for idx in ${!PARAMS[@]}
  do
-    if [ $1 == ${PARAMS[$idx]} ]
+    if [ "$1" == "${PARAMS[$idx]}" ]
     then
        ZULU_PACK=${ZULU_PACKS[$idx]}
        ZULU_DIR=${ZULU_DIRS[$idx]}
@@ -31,7 +31,7 @@
  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0x219BD9C9
  apt-add-repository "deb http://repos.azul.com/azure-only/zulu/apt stable main"
  apt-get update
- apt-get -y --no-install-recommends install $ZULU_PACK
+ apt-get -y --no-install-recommends install "$ZULU_PACK"
  rm -rf /var/lib/apt/lists/*
 
  echo "export JAVA_HOME=/usr/lib/jvm/$ZULU_DIR" >> /etc/bash.bashrc
