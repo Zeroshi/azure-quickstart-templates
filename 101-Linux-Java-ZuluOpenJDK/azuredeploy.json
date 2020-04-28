@@ -60,10 +60,7 @@
     "authenticationType": {
       "type": "string",
       "defaultValue": "sshPublicKey",
-      "allowedValues": [
-        "password",
-        "sshPublicKey"
-      ],
+      "allowedValues": ["password", "sshPublicKey"],
       "metadata": {
         "description": "Type of authentication to use on the Virtual Machine."
       }
@@ -91,9 +88,7 @@
     "storageAccountType": {
       "type": "string",
       "defaultValue": "Standard_LRS",
-      "allowedValues": [
-        "Standard_LRS"
-      ],
+      "allowedValues": ["Standard_LRS"],
       "metadata": {
         "description": "Storage account type"
       }
@@ -121,9 +116,7 @@
     },
     "addressPrefixes": {
       "type": "array",
-      "defaultValue": [
-        "10.0.0.0/16"
-      ],
+      "defaultValue": ["10.0.0.0/16"],
       "metadata": {
         "description": "Address prefix of the virtual network"
       }
@@ -180,10 +173,7 @@
     "publicIpAllocationMethod": {
       "type": "string",
       "defaultValue": "Dynamic",
-      "allowedValues": [
-        "Dynamic",
-        "Static"
-      ],
+      "allowedValues": ["Dynamic", "Static"],
       "metadata": {
         "description": "Allocation method for the public ip address"
       }
@@ -191,10 +181,7 @@
     "publicIpSku": {
       "type": "string",
       "defaultValue": "Basic",
-      "allowedValues": [
-        "Basic",
-        "Standard"
-      ],
+      "allowedValues": ["Basic", "Standard"],
       "metadata": {
         "description": "Name of the resource group for the public ip address"
       }
@@ -306,9 +293,7 @@
       "apiVersion": "2019-11-01",
       "name": "[parameters('virtualNetworkName')]",
       "location": "[parameters('location')]",
-      "dependsOn": [
-        "[variables('networkSecurityGroupName')]"
-      ],
+      "dependsOn": ["[variables('networkSecurityGroupName')]"],
       "properties": {
         "addressSpace": {
           "addressPrefixes": "[parameters('addressPrefixes')]"
@@ -439,9 +424,7 @@
           "apiVersion": "2019-12-01",
           "name": "installScript",
           "location": "[parameters('location')]",
-          "dependsOn": [
-            "[parameters('vmName')]"
-          ],
+          "dependsOn": ["[parameters('vmName')]"],
           "properties": {
             "publisher": "Microsoft.Azure.Extensions",
             "type": "CustomScript",
