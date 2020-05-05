@@ -27,13 +27,13 @@ The template will
 Current Template is an extension to the Basic RDS Deployment Template, and it is
 mandatory to deploy any one of the template as prerequisite:
 
-- Basic RDS deployment template  
+- Basic RDS deployment template
   https://github.com/Azure/azure-quickstart-templates/tree/master/rds-deployment
 
-- RDS deployment from custom RDSH image  
+- RDS deployment from custom RDSH image
   https://github.com/Azure/azure-quickstart-templates/tree/master/rds-deployment-custom-image-rdsh
 
-- RDS deployment on pre-existing VNET and AD  
+- RDS deployment on pre-existing VNET and AD
   https://github.com/Azure/azure-quickstart-templates/tree/master/rds-deployment-existing-ad
 
 This template expects the same names of resources from RDS deployment, if

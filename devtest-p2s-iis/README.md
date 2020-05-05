@@ -34,6 +34,6 @@ following command:
     Get-AzureRmVpnClientPackage -ResourceGroupName "resource_group_name" -VirtualNetworkGatewayName "gateway_name" -ProcessorArchitecture Amd64
 
 This command will return a URL for the client executable that will install the
-VPN client for this Gateway on a Windows machine.  
+VPN client for this Gateway on a Windows machine.
 If you have the client certificate installed, then all you have to do is Connect
 to the VPN.

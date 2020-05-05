@@ -37,10 +37,10 @@ ServicePrincipalName parameter represents these RPs in user tenant and will
 remain same for all Azure subscriptions. This is a onetime operation. Once you
 have a configured a Key Vault property, you can use it to store as many App
 Service Certificates as you want without executing these PowerShell commands
-again. You can go through the Key Vault documentation for more information:  
+again. You can go through the Key Vault documentation for more information:
 https://azure.microsoft.com/en-us/documentation/articles/key-vault-get-started/
 
 The Web App and domain resources need to be in the same resource group. The Web
-App should have 'rootHostName' and www subdomain assigned as custom domains.  
-https://azure.microsoft.com/en-us/documentation/articles/custom-dns-web-site-buydomains-web-app/  
+App should have 'rootHostName' and www subdomain assigned as custom domains.
+https://azure.microsoft.com/en-us/documentation/articles/custom-dns-web-site-buydomains-web-app/
 https://azure.microsoft.com/en-us/documentation/articles/web-sites-custom-domain-name/

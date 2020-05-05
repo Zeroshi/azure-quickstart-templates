@@ -160,7 +160,7 @@ manage AADDS.
 ### Teardown Deployment
 
 To remove this deployment simply remove the resource group that contains this
-sample.   
+sample.
 <a name="references">
 
 ### References

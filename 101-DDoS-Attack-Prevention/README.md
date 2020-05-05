@@ -23,7 +23,7 @@
 7. [Teardown Deployment](#teardown)
 
 <a name="objectives">
-# Objective of the POC  
+# Objective of the POC
 This playbook illustrates a simulated Distributed Denial of Service (DDoS) attack against a virtual machine.  Work through the configuration setting to enable DDOS protections and get alerted when attacks occur.
 
 # Overview
@@ -40,7 +40,7 @@ DDoS Protection Standard protects resources in a virtual network including
 public IP addresses associated with virtual machines, load balancers, and
 application gateways. When coupled with the Application Gateway web application
 firewall, DDoS Protection Standard can provide full layer 3 to layer 7
-mitigation capability.  
+mitigation capability.
 Refer
 [Azure DDoS Protection Standard](https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview)
 for more details.

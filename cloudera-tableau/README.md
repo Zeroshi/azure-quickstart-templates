@@ -10,14 +10,14 @@
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/cloudera-tableau/CredScanResult.svg)
 
 Deploy a Cloudera Express cluster with the option to unlock Cloudera Enterprise
-features for a free 60-day trial  
-Will also deploy the latest Bring Your Own License version of Tableau  
+features for a free 60-day trial
+Will also deploy the latest Bring Your Own License version of Tableau
 Important! You must increase the default 20 cores in the region you are
-deploying  
+deploying
 Once the trial has concluded, the Cloudera Enterprise features will be disabled
 until you obtain and upload a license.
 
-By clicking "Deploy to Azure" you agree to the Terms and Conditions below.  
+By clicking "Deploy to Azure" you agree to the Terms and Conditions below.
 Deployment to Azure (use this if you are not sure)
 
 [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fcloudera-tableau%2Fazuredeploy.json)

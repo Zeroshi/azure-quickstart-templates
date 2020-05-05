@@ -45,16 +45,16 @@ events. For subsequent requests it takes 10-15 mins to reflect in OMS.
 
 <a name="prerequisites">
 # Prerequisites
-Access to Azure subscription to deploy following resources 
+Access to Azure subscription to deploy following resources
 1. Application gateway (WAF enabled)
 2. App Service (Web App)
-3. SQL Database 
+3. SQL Database
 4. OMS (Monitoring)
 
 <a name="attack">
-# Perform Attack 
+# Perform Attack
 Attack on web app with
-* Application gateway - WAF - Detection mode 
+* Application gateway - WAF - Detection mode
 
 
 1. Go to Azure Portal --> Select Resource Groups services --> Select Resource
@@ -72,7 +72,7 @@ Attack on web app with
 4. On Overview Page --> Copy Frontend public IP address as
    ![](images/xss-appgateway-det-ip.png)
 
-5. Open Internet Explorer with above details as shown below  
+5. Open Internet Explorer with above details as shown below
    ![](images/xss-webapp-contoso-landingpage.png)
 
 6. Click on Patient link and select Edit option
@@ -87,7 +87,7 @@ Attack on web app with
 
    ![](images/xss-attack-dashboard.png)
 
-<a name="detect">    
+<a name="detect">
 # Detect
 To detect the attack, execute following query in Azure Log Analytics
 1. Go to Azure Portal --> navigate to Log Analytics in same resource group

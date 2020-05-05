@@ -98,7 +98,7 @@ id=eduPersonPrincipalName to uid
 data connector settings for LDAP. Again these settings vary as per LDAP setup.
 <DataConnector id="myLDAP" xsi:type="LDAPDirectory"
 				ldapURL="ldap://125.524.52.54:389"
-				baseDN="cn=Users,DC=testorg,DC=com" 
+				baseDN="cn=Users,DC=testorg,DC=com"
 				principal="john@testorg.com"
 				principalCredential="JohnZSQ12*("> <FilterTemplate> <![CDATA[
 					%{idp.attribute.resolver.LDAP.searchFilter}

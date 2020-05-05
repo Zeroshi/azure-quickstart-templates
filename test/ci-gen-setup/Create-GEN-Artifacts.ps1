@@ -1,8 +1,8 @@
 #Requires -module AzureRM
-#Requires -module pki 
+#Requires -module pki
 
 <#
-Use this script to create the GEN artifacts needed by the pipeline to test templates.  
+Use this script to create the GEN artifacts needed by the pipeline to test templates.
 
 ########################################################################################
 The Crypto module (PKI) is not supported on PS Core so this is using older AzureRM modules.
@@ -26,7 +26,7 @@ param(
     #
     # You must generate a public/private key pair and pass to the script use the following command with no passphrase:
     #   ssh-keygen -t rsa -b 4096 -f scratch
-    # 
+    #
     [string] $sshPublicKeyValue = $(Get-Content -Path scratch.pub -Raw),
     [string] $sshPrivateKeyValue = $(Get-Content -Path scratch -Raw)
 
@@ -152,11 +152,11 @@ New-AzureRMRoleAssignment -RoleDefinitionId $roleDef.id -ObjectId $mlsp.id -Scop
 $json.Add("MACHINE-LEARNING-SP-OBJECTID",  $mlsp.id)
 
 $cosmossp = Get-AzureRmADServicePrincipal -ServicePrincipalName "a232010e-820c-4083-83bb-3ace5fc29d0b" # -DisplayName "Azure Cosmos DB"
-Set-AzureRMKeyVaultAccessPolicy -VaultName $KeyVaultName -ObjectId $cosmossp.id -PermissionsToKeys get,unwrapKey,wrapKey 
+Set-AzureRMKeyVaultAccessPolicy -VaultName $KeyVaultName -ObjectId $cosmossp.id -PermissionsToKeys get,unwrapKey,wrapKey
 $json.Add("COSMOS-DB-SP-OBJECTID", $cosmossp.id)
 
 $webapp = Get-AzureRmADServicePrincipal -ServicePrincipalName "abfa0a7c-a6b6-4736-8310-5855508787cd" # Web App SP for certificate scenarios - not available in Fairfax?
-Set-AzureRMKeyVaultAccessPolicy -VaultName $KeyVaultName -ObjectId $webapp.id -PermissionsToSecrets get 
+Set-AzureRMKeyVaultAccessPolicy -VaultName $KeyVaultName -ObjectId $webapp.id -PermissionsToSecrets get
 
 # 1) Create a sample password for the vault
 $SecretValue = ConvertTo-SecureString -String $CertPass -AsPlainText -Force
@@ -255,7 +255,7 @@ $refParam = @"
 $json.Add("KEYVAULT-SSH-PUBLIC-KEY-REFERENCE", (ConvertFrom-Json $refParam))
 
 
-#5 ) SSL Cert (TODO not sure if this is making the correct cert, need to test it) 
+#5 ) SSL Cert (TODO not sure if this is making the correct cert, need to test it)
 #https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-secure-web-server#generate-a-certificate-and-store-in-key-vault
 #$policy = New-AzureKeyVaultCertificatePolicy -SubjectName "CN=www.contoso.com" -SecretContentType "application/x-pkcs12" -IssuerName Self -ValidityInMonths 120
 #Add-AzureKeyVaultCertificate -VaultName $keyvaultName -Name "mycert" -CertificatePolicy $policy
@@ -280,7 +280,7 @@ $json.Add("SELFSIGNED-CERT-DNSNAME", $CertDNSName)
 # Create the Microsoft.appConfiguration/configurationStores
 # There are no PS cmdlets for app config store yet - use context must be set with "az account set ..."
 # Also, not available in Fairfax
-az appconfig create -g "$ResourceGroupName" -n "$appConfigStoreName" -l "$Location" --verbose 
+az appconfig create -g "$ResourceGroupName" -n "$appConfigStoreName" -l "$Location" --verbose
 az appconfig kv set -n "$appConfigStoreName" --key 'key1' --value "value1" --label 'template' -y --verbose
 az appconfig kv set -n "$appConfigStoreName" --key 'windowsOSVersion' --value '2019-Datacenter' --label 'template' -y --verbose
 az appconfig kv set -n "$appConfigStoreName" --key 'diskSizeGB' --value "1023" --label 'template' -y --verbose

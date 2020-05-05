@@ -98,7 +98,7 @@ if(!$supportedEnvironments.Contains("AzureCloud") -and $readme -like "*$($Public
 }
 
 if( $dumpHelp ){
-    
+
     $md = @"
 
 ![Azure Public Test Date]($($BadgeLinks[0]))
@@ -112,7 +112,7 @@ if( $dumpHelp ){
 
 $PublicButton
 $GovButton
-$ARMVizButton    
+$ARMVizButton
 "@
 
     Write-Output "Ensure the following markdown is at the top of the README under the heading:`n"

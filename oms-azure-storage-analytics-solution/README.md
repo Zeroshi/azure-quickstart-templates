@@ -80,7 +80,7 @@ Log Analytics workspace in the same Resource Group
 
 ![alt text](images/omsrgaa.png "Resource Group")
 
-###You can now deploy the template  
+###You can now deploy the template
 [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Foms-azure-storage-analytics-solution%2Fazuredeploy.json)
 
 This will send you to the Azure Portal with some default values for the template
@@ -159,7 +159,7 @@ storage accounts within your Azure Subscription.
 
 Solution collects and visualizes;
 
-**Inventory Data**   
+**Inventory Data**
 \*Storage accounts
 
 - File Shares

@@ -24,7 +24,7 @@
 8. [Teardown Deployment](#teardown)
 
 <a name="objectives">
-# Objective of the POC 
+# Objective of the POC
 This playbook demonstrates SQL injection attack against an unprotected sample web application.  After simulating an attack, harden the resources by applying protections to the web and SQL layers.  Re-attempt the attack against the protected application to see the defense in action.
 
 <a name="overview">
@@ -49,21 +49,21 @@ It showcases following use cases
 
 Although the deployment takes 10-15mins, the log aggregation by OMS take a few
 hours to get configured in the backend. You may not see attack/mitigation logs
-for detection and prevention events during the aggregation time window.  
+for detection and prevention events during the aggregation time window.
 Subsequently logs will take 10-15 mins to reflect in OMS.
 
 <a name="prerequisites">
 # Prerequisites
-Access to Azure subscription to deploy following resources 
+Access to Azure subscription to deploy following resources
 1. Application gateway (WAF enabled)
 2. App Service (Web App)
-3. SQL Database 
+3. SQL Database
 4. OMS (Monitoring)
 
 <a name="attack">
-# Perform Attack 
+# Perform Attack
 Attack on web app with
-* Application gateway - WAF - Detection mode 
+* Application gateway - WAF - Detection mode
 * SQL server and database with Threat Detection disabled.
 
 1. Go to Azure Portal --> Select Resource Groups services --> Select Resource
@@ -81,7 +81,7 @@ Attack on web app with
 4. On Overview Page --> Copy Frontend public IP address (DNS label) as
    ![](images/sql-inj-appgateway-det-ip.png)
 
-5. Open Internet Explorer with above details as shown below  
+5. Open Internet Explorer with above details as shown below
    ![](images/sql-inj-webapp-contoso-landingpage.png)
 
 6. Click on Patient link it will display list of details
@@ -94,7 +94,7 @@ Attack on web app with
    ![](images/sql-inj-webapp-contoso-patients-attack-page.png)
 
 <a name="detect">
-# Detect  
+# Detect
 ###  Detection using OMS
 To detect the attack, execute following query in Azure Log Analytics
 <p/>

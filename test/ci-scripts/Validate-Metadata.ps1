@@ -8,11 +8,11 @@ $ErrorView = "NormalView" # this is working around a bug in Azure DevOps with PS
 
 #get the file content
 Write-Output "Testing file: $SampleFolder\metadata.json"
-$metadata = Get-Content -Path "$SampleFolder\metadata.json" -Raw 
+$metadata = Get-Content -Path "$SampleFolder\metadata.json" -Raw
 
 #Check metadata.json against the schema
 $schema = Invoke-WebRequest -Uri "https://aka.ms/azure-quickstart-templates-metadata-schema" -UseBasicParsing
-$metadata | Test-Json -Schema $schema.content 
+$metadata | Test-Json -Schema $schema.content
 
 #Make sure the date has been updated
 $rawDate = ($metadata | convertfrom-json).dateUpdated
@@ -55,7 +55,7 @@ Write-Host "##vso[task.setvariable variable=supported.environments]$s"
 # Set-Item -path "env:supported_environments" -value "$s"
 
 Write-Output "Is cloud supported: $IsCloudSupported"
-# if the cloud is not supported, set the result var to "Not Supported", else leave the default of "False" 
+# if the cloud is not supported, set the result var to "Not Supported", else leave the default of "False"
 # and then the result.deployment will indeed be the result of the test if supported
 if (!$IsCloudSupported) {
     Write-Host "##vso[task.setvariable variable=result.deployment]Not Supported"

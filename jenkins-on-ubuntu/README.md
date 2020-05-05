@@ -20,7 +20,7 @@ network interfaces required by the installation.
 ## Topology
 
 This template deploys a Jenkins master and a configurable number of Jenkins
-slave nodes.  
+slave nodes.
 The master node is exposed on a public IP address that you can access through a
 browser on port :8080 as well as SSH on the standard port.
 

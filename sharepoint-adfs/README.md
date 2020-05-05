@@ -70,11 +70,11 @@ storage account types:
   [Standard_DS3_v2](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-general#dsv2-series)
   / Premium_LRS
 
-> **Notes:**  
+> **Notes:**
 > I strongly recommend to update SharePoint to a recent build just after the
-> provisioning is complete.  
+> provisioning is complete.
 > With the default setting for virtual machines, provisioning of the template
-> takes about 1h15 to complete.  
+> takes about 1h15 to complete.
 > The password complexity check in the form is not accurate and may validate a
 > password that will be rejected by Azure when it provisions the VMs. Make sure
 > to **use at least 2 special characters for the passwords**.

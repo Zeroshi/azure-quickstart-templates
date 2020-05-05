@@ -18,7 +18,7 @@ blockchain networks at scale with simplified network formation, consortium
 management, and governance. As default the template uses a **Basic price tier**
 that provides 1 vCore CPU. The available locations for this deployment are:
 
-> "westeurope",  
+> "westeurope",
 > "eastus", "southeastasia", "westeurope", "northeurope", "westus2", "japaneast"
 
 If you are new to BlockChain Services, see:
