@@ -120,9 +120,7 @@
           "actions": {
             "Complete_the_message_in_a_topic_subscription": {
               "runAfter": {
-                "Send_message": [
-                  "Succeeded"
-                ]
+                "Send_message": ["Succeeded"]
               },
               "type": "ApiConnection",
               "inputs": {
@@ -154,9 +152,7 @@
             },
             "Send_message": {
               "runAfter": {
-                "HTTP": [
-                  "Succeeded"
-                ]
+                "HTTP": ["Succeeded"]
               },
               "type": "ApiConnection",
               "inputs": {
@@ -262,17 +258,13 @@
                 }
               },
               "runAfter": {
-                "Response": [
-                  "Succeeded"
-                ]
+                "Response": ["Succeeded"]
               },
               "type": "Foreach"
             },
             "Get_messages_from_a_topic_subscription_(peek-lock)": {
               "runAfter": {
-                "Send_message": [
-                  "Succeeded"
-                ]
+                "Send_message": ["Succeeded"]
               },
               "type": "ApiConnection",
               "inputs": {
@@ -332,9 +324,7 @@
             },
             "Response": {
               "runAfter": {
-                "Parse_JSON": [
-                  "Succeeded"
-                ]
+                "Parse_JSON": ["Succeeded"]
               },
               "type": "Response",
               "kind": "Http",
@@ -345,9 +335,7 @@
             },
             "Send_message": {
               "runAfter": {
-                "Initialize_variable": [
-                  "Succeeded"
-                ]
+                "Initialize_variable": ["Succeeded"]
               },
               "type": "ApiConnection",
               "inputs": {
@@ -432,9 +420,7 @@
           "actions": {
             "Complete_the_message_in_a_topic_subscription": {
               "runAfter": {
-                "Send_message": [
-                  "Succeeded"
-                ]
+                "Send_message": ["Succeeded"]
               },
               "type": "ApiConnection",
               "inputs": {
@@ -454,9 +440,7 @@
             },
             "Compose": {
               "runAfter": {
-                "Parse_JSON": [
-                  "Succeeded"
-                ]
+                "Parse_JSON": ["Succeeded"]
               },
               "type": "Compose",
               "inputs": {
@@ -488,9 +472,7 @@
             },
             "Send_message": {
               "runAfter": {
-                "Compose": [
-                  "Succeeded"
-                ]
+                "Compose": ["Succeeded"]
               },
               "type": "ApiConnection",
               "inputs": {
@@ -576,11 +558,7 @@
         "[resourceId('Microsoft.ServiceBus/namespaces', parameters('serviceBusNamespace'))]"
       ],
       "properties": {
-        "rights": [
-          "Listen",
-          "Manage",
-          "Send"
-        ]
+        "rights": ["Listen", "Manage", "Send"]
       }
     },
     {

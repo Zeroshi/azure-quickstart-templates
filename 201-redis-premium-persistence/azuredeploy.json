@@ -17,12 +17,7 @@
     },
     "redisCacheCapacity": {
       "type": "int",
-      "allowedValues": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "allowedValues": [1, 2, 3, 4],
       "defaultValue": 1,
       "metadata": {
         "description": "The size of the new Azure Redis Cache instance. Valid family and capacity combinations are (C0..C6, P1..P4)."

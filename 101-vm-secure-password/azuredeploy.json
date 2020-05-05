@@ -117,14 +117,10 @@
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('virtualNetworkName')]",
       "location": "[parameters('location')]",
-      "dependsOn": [
-        "[variables('networkSecurityGroupName')]"
-      ],
+      "dependsOn": ["[variables('networkSecurityGroupName')]"],
       "properties": {
         "addressSpace": {
-          "addressPrefixes": [
-            "[variables('addressPrefix')]"
-          ]
+          "addressPrefixes": ["[variables('addressPrefix')]"]
         },
         "subnets": [
           {

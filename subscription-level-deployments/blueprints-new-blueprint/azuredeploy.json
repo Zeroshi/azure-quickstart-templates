@@ -29,9 +29,7 @@
             "metadata": {
               "displayName": "Resource types to pass to the policy assignment artifact."
             },
-            "defaultValue": [
-              "Citrix.Cloud/accounts"
-            ]
+            "defaultValue": ["Citrix.Cloud/accounts"]
           }
         }
       }
@@ -41,9 +39,7 @@
       "name": "[concat(parameters('blueprintName'), '/policyArtifact')]",
       "apiVersion": "2018-11-01-preview",
       "kind": "policyAssignment",
-      "dependsOn": [
-        "[parameters('blueprintName')]"
-      ],
+      "dependsOn": ["[parameters('blueprintName')]"],
       "properties": {
         "displayName": "Blocked Resource Types policy definition",
         "description": "Block certain resource types",

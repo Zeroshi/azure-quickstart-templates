@@ -16,10 +16,7 @@
       }
     },
     "sqlServerLicenseType": {
-      "allowedValues": [
-        "PAYG",
-        "AHUB"
-      ],
+      "allowedValues": ["PAYG", "AHUB"],
       "type": "string",
       "metadata": {
         "description": "Specify the SQL Server License type for all VM's."
@@ -33,11 +30,7 @@
       "defaultValue": "[resourceGroup().name]"
     },
     "sqlServerImageType": {
-      "allowedValues": [
-        "SQL2017-WS2016",
-        "SQL2016-WS2016",
-        "SQL2019-WS2019"
-      ],
+      "allowedValues": ["SQL2017-WS2016", "SQL2016-WS2016", "SQL2019-WS2019"],
       "type": "string",
       "metadata": {
         "description": "Select the version of SQL Server Image type"

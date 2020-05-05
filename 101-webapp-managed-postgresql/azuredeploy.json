@@ -26,13 +26,7 @@
     "databaseSkuCapacity": {
       "type": "int",
       "defaultValue": 2,
-      "allowedValues": [
-        2,
-        4,
-        8,
-        16,
-        32
-      ],
+      "allowedValues": [2, 4, 8, 16, 32],
       "metadata": {
         "description": "Azure database for PostgreSQL compute capacity in vCores (2,4,8,16,32)"
       }
@@ -60,10 +54,7 @@
     },
     "databaseSkuSizeMB": {
       "type": "int",
-      "allowedValues": [
-        102400,
-        51200
-      ],
+      "allowedValues": [102400, 51200],
       "defaultValue": 51200,
       "metadata": {
         "description": "Azure database for PostgreSQL Sku Size "
@@ -72,23 +63,14 @@
     "databaseSkuTier": {
       "type": "string",
       "defaultValue": "GeneralPurpose",
-      "allowedValues": [
-        "GeneralPurpose",
-        "MemoryOptimized",
-        "Basic"
-      ],
+      "allowedValues": ["GeneralPurpose", "MemoryOptimized", "Basic"],
       "metadata": {
         "description": "Azure database for PostgreSQL pricing tier"
       }
     },
     "postgresqlVersion": {
       "type": "string",
-      "allowedValues": [
-        "9.5",
-        "9.6",
-        "10.10",
-        "11.5"
-      ],
+      "allowedValues": ["9.5", "9.6", "10.10", "11.5"],
       "defaultValue": "9.6",
       "metadata": {
         "description": "PostgreSQL version"

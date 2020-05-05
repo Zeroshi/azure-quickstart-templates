@@ -6,8 +6,5 @@
   "summary": "This template creates an Azure Cosmos DB account for Gremlin API in two regions with one database and one graph using autoscale throughput.",
   "githubUsername": "markjbrown",
   "dateUpdated": "2020-04-29",
-  "environments": [
-    "AzureCloud",
-    "AzureUSGovernment"
-  ]
+  "environments": ["AzureCloud", "AzureUSGovernment"]
 }

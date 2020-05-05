@@ -6,8 +6,5 @@
   "summary": "This template creates an Azure Cosmos DB account for Cassandra API in two regions with a keyspace and table with autoscale throughput.",
   "githubUsername": "markjbrown",
   "dateUpdated": "2020-04-29",
-  "environments": [
-    "AzureCloud",
-    "AzureUSGovernment"
-  ]
+  "environments": ["AzureCloud", "AzureUSGovernment"]
 }

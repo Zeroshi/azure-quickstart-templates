@@ -44,10 +44,7 @@
     },
     "serverVersion": {
       "defaultValue": "3.6",
-      "allowedValues": [
-        "3.2",
-        "3.6"
-      ],
+      "allowedValues": ["3.2", "3.6"],
       "type": "String",
       "metadata": {
         "description": "Specifies the MongoDB server version to use."
@@ -92,10 +89,7 @@
     "throughputPolicy": {
       "type": "string",
       "defaultValue": "Autoscale",
-      "allowedValues": [
-        "Manual",
-        "Autoscale"
-      ],
+      "allowedValues": ["Manual", "Autoscale"],
       "metadata": {
         "description": "The throughput policy for the Database"
       }
@@ -208,10 +202,7 @@
           "indexes": [
             {
               "key": {
-                "keys": [
-                  "user_id",
-                  "user_address"
-                ]
+                "keys": ["user_id", "user_address"]
               },
               "options": {
                 "unique": "true"
@@ -219,9 +210,7 @@
             },
             {
               "key": {
-                "keys": [
-                  "_ts"
-                ]
+                "keys": ["_ts"]
               },
               "options": {
                 "expireAfterSeconds": "2629746"
@@ -250,10 +239,7 @@
           "indexes": [
             {
               "key": {
-                "keys": [
-                  "company_id",
-                  "company_address"
-                ]
+                "keys": ["company_id", "company_address"]
               },
               "options": {
                 "unique": "true"
@@ -261,9 +247,7 @@
             },
             {
               "key": {
-                "keys": [
-                  "_ts"
-                ]
+                "keys": ["_ts"]
               },
               "options": {
                 "expireAfterSeconds": "2629746"

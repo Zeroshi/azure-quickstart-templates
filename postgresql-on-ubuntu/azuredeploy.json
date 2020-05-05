@@ -24,12 +24,7 @@
     "tshirtSize": {
       "type": "string",
       "defaultValue": "Small",
-      "allowedValues": [
-        "Small",
-        "Medium",
-        "Large",
-        "XLarge"
-      ],
+      "allowedValues": ["Small", "Medium", "Large", "XLarge"],
       "metadata": {
         "description": "T-shirt size of the PostgreSQL deployment"
       }
@@ -43,10 +38,7 @@
     "jumpbox": {
       "type": "string",
       "defaultValue": "Enabled",
-      "allowedValues": [
-        "Enabled",
-        "Disabled"
-      ],
+      "allowedValues": ["Enabled", "Disabled"],
       "metadata": {
         "description": "The flag allowing to enable or disable provisioning of the jumpbox VM that can be used to access the PostgreSQL environment"
       }
@@ -99,10 +91,7 @@
         "storage": {
           "count": 1,
           "pool": "db",
-          "map": [
-            0,
-            0
-          ],
+          "map": [0, 0],
           "jumpbox": 0
         }
       },
@@ -115,10 +104,7 @@
         "storage": {
           "count": 2,
           "pool": "db",
-          "map": [
-            0,
-            1
-          ],
+          "map": [0, 1],
           "jumpbox": 0
         }
       },
@@ -131,11 +117,7 @@
         "storage": {
           "count": 2,
           "pool": "db",
-          "map": [
-            0,
-            1,
-            1
-          ],
+          "map": [0, 1, 1],
           "jumpbox": 0
         }
       },
@@ -148,12 +130,7 @@
         "storage": {
           "count": 2,
           "pool": "db",
-          "map": [
-            0,
-            0,
-            1,
-            1
-          ],
+          "map": [0, 0, 1, 1],
           "jumpbox": 0
         }
       }

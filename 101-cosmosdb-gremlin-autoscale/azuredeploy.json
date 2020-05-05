@@ -63,10 +63,7 @@
     "automaticFailover": {
       "type": "bool",
       "defaultValue": true,
-      "allowedValues": [
-        true,
-        false
-      ],
+      "allowedValues": [true, false],
       "metadata": {
         "description": "Enable automatic failover for regions"
       }
@@ -86,10 +83,7 @@
     "throughputPolicy": {
       "type": "string",
       "defaultValue": "Autoscale",
-      "allowedValues": [
-        "Manual",
-        "Autoscale"
-      ],
+      "allowedValues": ["Manual", "Autoscale"],
       "metadata": {
         "description": "The throughput policy for the graph"
       }
@@ -212,9 +206,7 @@
             ]
           },
           "partitionKey": {
-            "paths": [
-              "/myPartitionKey"
-            ],
+            "paths": ["/myPartitionKey"],
             "kind": "Hash"
           },
           "options": "[variables('throughputPolicyToUse')]"

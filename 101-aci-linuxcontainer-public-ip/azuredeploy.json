@@ -50,11 +50,7 @@
       "metadata": {
         "description": "The behavior of Azure runtime if container has stopped."
       },
-      "allowedValues": [
-        "never",
-        "always",
-        "onfailure"
-      ]
+      "allowedValues": ["never", "always", "onfailure"]
     }
   },
   "variables": {},

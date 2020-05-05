@@ -19,9 +19,7 @@
       "location": "[parameters('location')]",
       "properties": {
         "addressSpace": {
-          "addressPrefixes": [
-            "10.0.0.0/16"
-          ]
+          "addressPrefixes": ["10.0.0.0/16"]
         },
         "subnets": [
           {
@@ -40,9 +38,7 @@
       "location": "[parameters('location')]",
       "properties": {
         "addressSpace": {
-          "addressPrefixes": [
-            "11.0.0.0/16"
-          ]
+          "addressPrefixes": ["11.0.0.0/16"]
         },
         "subnets": [
           {
