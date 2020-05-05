@@ -13,9 +13,15 @@
 [![Deploy To Azure US Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)]("https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-managed-postgresql%2Fazuredeploy.json")
 [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)]("http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-managed-postgresql%2Fazuredeploy.json")
 
-This template provides a easy way to deploy web app on Azure Web Apps on Windows with [Azure database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/overview#azure-database-for-postgresql---single-server)
+This template provides a easy way to deploy web app on Azure Web Apps on Windows
+with
+[Azure database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/overview#azure-database-for-postgresql---single-server)
 
-This template deploys a web app with a managed PostgreSQL managed database of [different pricing tiers: Basic, General Purpose, and Memory Optimized](https://docs.microsoft.com/en-us/azure/postgresql/concepts-pricing-tiers). The web app with PostgreSQL is an app service that allows you to deploy and managed PostgreSQL data and a website. This will deploy a free tier Linux App Service Plan where you will host your app service.
+This template deploys a web app with a managed PostgreSQL managed database of
+[different pricing tiers: Basic, General Purpose, and Memory Optimized](https://docs.microsoft.com/en-us/azure/postgresql/concepts-pricing-tiers).
+The web app with PostgreSQL is an app service that allows you to deploy and
+managed PostgreSQL data and a website. This will deploy a free tier Linux App
+Service Plan where you will host your app service.
 
 If you are new to Azure App Service, see:
 
@@ -30,6 +36,8 @@ If you are new to template deployment, see:
 
 ## Prerequisites
 
-If you have already a Linux App Service Plan, you will have to deploy the new web app into the same resource group that the other web app is. That's because Student accounts has a limit of only 1 free tier Linux app service plan.
+If you have already a Linux App Service Plan, you will have to deploy the new
+web app into the same resource group that the other web app is. That's because
+Student accounts has a limit of only 1 free tier Linux app service plan.
 
 `Tags: Azure4Student, appServices , PostgreSQL, linux, Beginner`

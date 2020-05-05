@@ -12,6 +12,5 @@
 [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2f201-web-app-public-certificate%2fazuredeploy.json)
 [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2f201-web-app-public-certificate%2fazuredeploy.json)
 
-Before deploying this template, you should create a dedicated Web App that would be using the public certificate ('exisitngWebAppName' parameter)
-
-
+Before deploying this template, you should create a dedicated Web App that would
+be using the public certificate ('exisitngWebAppName' parameter)

@@ -18,20 +18,27 @@
 
 ## Overview
 
-This template deploys a Windows VM with the Azul Zulu for Azure - Enterprise Edition, a supported OpenJDK JVM from Azul.<br/>
-The VM can be configured using new or existing resources for Storage, the Virtual Network and Public IP Address.<br/>
+This template deploys a Windows VM with the Azul Zulu for Azure - Enterprise
+Edition, a supported OpenJDK JVM from Azul.<br/> The VM can be configured using
+new or existing resources for Storage, the Virtual Network and Public IP
+Address.<br/>
 
-Choices for Windows are Server 2019 Datacenter, Server 2016 Datacenter, Desktop 10 Enterprise, Desktop 10 Enterprise N, Desktop 10 Pro, and Desktop 10 Pro N.<br/>
-The default is Server 2019 Datacenter.
+Choices for Windows are Server 2019 Datacenter, Server 2016 Datacenter, Desktop
+10 Enterprise, Desktop 10 Enterprise N, Desktop 10 Pro, and Desktop 10 Pro
+N.<br/> The default is Server 2019 Datacenter.
 
-Choices for the Zulu OpenJDK JVM are the JDK or JRE for the latest release of Java 7, 8, 11, or 13.<br/>
-The default is the Zulu Java 8 JDK.
+Choices for the Zulu OpenJDK JVM are the JDK or JRE for the latest release of
+Java 7, 8, 11, or 13.<br/> The default is the Zulu Java 8 JDK.
 
-The VM is deployed in the resource group location by default using the latest patched version of Windows 2019-Datacenter and a Standard_D2s_v3 size VM as the default value.
+The VM is deployed in the resource group location by default using the latest
+patched version of Windows 2019-Datacenter and a Standard_D2s_v3 size VM as the
+default value.
 
-The Zulu install script is available [here.](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-Windows-Java-ZuluOpenJDK/zulu-install.ps1)
+The Zulu install script is available
+[here.](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-Windows-Java-ZuluOpenJDK/zulu-install.ps1)
 
 **Related Templates**
+
 - [101-Linux-Java-ZuluOpenJDK](https://github.com/Azure/azure-quickstart-templates/tree/master/101-Linux-Java-ZuluOpenJDK)
 
 **If you are new to the Azul Zulu OpenJDK JVM, see:**
@@ -57,5 +64,4 @@ The Zulu install script is available [here.](https://raw.githubusercontent.com/A
 
 - [Azure Resource Manager documentation](https://docs.microsoft.com/azure/azure-resource-manager/)
 
-`Tags: Windows, Java, OpenJDK, Zulu`  
-
+`Tags: Windows, Java, OpenJDK, Zulu`

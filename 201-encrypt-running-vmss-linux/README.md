@@ -14,6 +14,5 @@
 
 This template enables encryption on a running VM Scale Set of Linux VMs
 
-For more information about Azure Disk Encryption, see https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-linux
-
-
+For more information about Azure Disk Encryption, see
+https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-linux

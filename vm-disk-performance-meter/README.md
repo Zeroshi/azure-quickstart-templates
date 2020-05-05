@@ -15,7 +15,8 @@
 
 This template allows you to run a data disk performance test using fio utility.
 
-Upon template deployment you will have the disk perfomance automatically measured. You can see the measurements like this:
+Upon template deployment you will have the disk perfomance automatically
+measured. You can see the measurements like this:
 
 ```powershell
 OutputsString           :
@@ -26,7 +27,8 @@ OutputsString           :
 
 ![disk meter](images/diskperformance.png "Disk performance measurement output")
 
-To re-measure and get full ouput you can login to the test VM with credentials you provided during deployment and use this a command like this:
+To re-measure and get full ouput you can login to the test VM with credentials
+you provided during deployment and use this a command like this:
 
 ```shell
 sudo fio --runtime 30 /opt/vmdiskperf/t
@@ -39,4 +41,5 @@ sudo echo -e '[io]\nrw=randrw\nsize=128m\ndirectory=/datadisk' | sudo fio -
 
 ```
 
-In case you don't need to re-measure, it is safe to delete the created resource group.
+In case you don't need to re-measure, it is safe to delete the created resource
+group.

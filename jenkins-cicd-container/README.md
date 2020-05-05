@@ -11,26 +11,35 @@
 
 ## Architecture overview
 
-Containers make it very easy for you to continuously build and deploy your applications. By orchestrating deployment of those containers using Kubernetes in Azure Container Service, you can achieve replicable, manageable clusters of containers.
+Containers make it very easy for you to continuously build and deploy your
+applications. By orchestrating deployment of those containers using Kubernetes
+in Azure Container Service, you can achieve replicable, manageable clusters of
+containers.
 
-By setting up a continuous build to produce your container images and orchestration, you can increase the speed and reliability of your deployment.
+By setting up a continuous build to produce your container images and
+orchestration, you can increase the speed and reliability of your deployment.
 
 ![](images/architecture.png)
 
 1. Change application source code.
 2. Commit code to GitHub.
 3. Continuous Integration Trigger to Jenkins.
-4. Jenkins triggers a build job using Azure Container Service (AKS) for a dynamic build agent.
+4. Jenkins triggers a build job using Azure Container Service (AKS) for a
+   dynamic build agent.
 5. Jenkins builds and pushes Docker container Azure Container Registry.
-6. Jenkins deploys new containerized app to Kubernetes on Azure Container Service (AKS) backed by Azure Cosmos DB.
-7. Grafana displays visualization of infrastructure and application metrics via Azure Monitor.
+6. Jenkins deploys new containerized app to Kubernetes on Azure Container
+   Service (AKS) backed by Azure Cosmos DB.
+7. Grafana displays visualization of infrastructure and application metrics via
+   Azure Monitor.
 8. Monitor application and make improvements.
 
 ## Deploy to Azure
 
 ### Create an Azure service principal
 
-1. Install [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) if you have not.
+1. Install
+   [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+   if you have not.
 
 2. Open terminal, then execute:
 
@@ -40,7 +49,8 @@ By setting up a continuous build to produce your container images and orchestrat
 
    Follow the guide to sign in.
 
-3. Execute the command below to create service principal, with the role ``Contributor`` and under the current subscription by default.
+3. Execute the command below to create service principal, with the role
+   `Contributor` and under the current subscription by default.
 
    ```sh
    az ad sp create-for-rbac --name <AppName>
@@ -62,57 +72,61 @@ By setting up a continuous build to produce your container images and orchestrat
 
    Copy the values **appId** and **password**, they will be used later.
 
-   > Note: for more details about creating an Azure service principal, please refer to [Create an Azure service principal with Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
+   > Note: for more details about creating an Azure service principal, please
+   > refer to
+   > [Create an Azure service principal with Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
 
 ### Deploy
 
 1. Click **Deploy to Azure** to start the deployment.
 
-   [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fjenkins-cicd-container%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fjenkins-cicd-container%2Fazuredeploy.json)
+   [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fjenkins-cicd-container%2Fazuredeploy.json)
+   [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fjenkins-cicd-container%2Fazuredeploy.json)
 
-   
-   
+2) Fill the form:
 
-   
-   
-   
+   - Choose a subscription.
 
-2. Fill the form:
+   - Use a new resource group and choose a location.
 
-   * Choose a subscription.
+   - Input the settings.
 
-   * Use a new resource group and choose a location.
-
-   * Input the settings.
-
-     > Note: 
+     > Note:
      >
-     > - The names and DNS prefixes should be unique. To avoid naming conflicting, we strongly recommend you to add some suffix. For example, the Cosmos Db name could be **cosmos-180130-1512**.
-     > - ACR (Azure Container Registry) names may contain alpha numeric characters only. A valid name is **acr1801301512**.
+     > - The names and DNS prefixes should be unique. To avoid naming
+     >   conflicting, we strongly recommend you to add some suffix. For example,
+     >   the Cosmos Db name could be **cosmos-180130-1512**.
+     > - ACR (Azure Container Registry) names may contain alpha numeric
+     >   characters only. A valid name is **acr1801301512**.
 
-   * Check **I agree to the terms and conditions stated above**.
+   - Check **I agree to the terms and conditions stated above**.
 
-3. Click **Purchase**.
+3) Click **Purchase**.
 
-   > Note: It will take about 13 minutes to finish the deployment. 
+   > Note: It will take about 13 minutes to finish the deployment.
 
 ### Deployment output
 
-After the deployment finishes, you will get some important infomation from the outputs section.
+After the deployment finishes, you will get some important infomation from the
+outputs section.
 
 ![](images/azure-deployment-output.png)
 
->Note: the deployment window above could be re-open in the **Deployments** tab of the resource group.
+> Note: the deployment window above could be re-open in the **Deployments** tab
+> of the resource group.
 >
->![](images/azure-resource-group-deployments.png)
+> ![](images/azure-resource-group-deployments.png)
 >
->Click the first one **Microsoft.Template**.
+> Click the first one **Microsoft.Template**.
 
 ## Access Deployed Resources
 
 ### Access Jenkins
 
-This Jenkins instance does not support https, so logging in through a public IP address has been disabled (it would expose your password and other information to eavesdropping). To securely login, you need to connect to the Jenkins instance using SSH port forwarding.
+This Jenkins instance does not support https, so logging in through a public IP
+address has been disabled (it would expose your password and other information
+to eavesdropping). To securely login, you need to connect to the Jenkins
+instance using SSH port forwarding.
 
 #### Connect to the Jenkins instance using SSH port forwarding
 
@@ -127,11 +141,12 @@ This Jenkins instance does not support https, so logging in through a public IP 
    Are you sure you want to continue connecting (yes/no)?
    ```
 
-3. Input **yes** and press **Enter** key to accept and add the ECDSA to the list of known hosts.
+3. Input **yes** and press **Enter** key to accept and add the ECDSA to the list
+   of known hosts.
 
    ```sh
    Warning: Permanently added 'jenkins-180131-1520.eastus.cloudapp.azure.com,40.71.20.174' (ECDSA) to the list of known hosts.
-   azureuser@jenkins-180131-1520.eastus.cloudapp.azure.com's password: 
+   azureuser@jenkins-180131-1520.eastus.cloudapp.azure.com's password:
    ```
 
 4. Input the **Linux Admin Password**
@@ -139,7 +154,7 @@ This Jenkins instance does not support https, so logging in through a public IP 
    If your pass work is correct, you will get the welcome message:
 
    ```Sh
-   Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.13.0-1007-azure x86_64) 
+   Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.13.0-1007-azure x86_64)
    ...
    ```
 
@@ -167,16 +182,17 @@ This Jenkins instance does not support https, so logging in through a public IP 
 
 3. Input the user and password:
 
-   * User: admin
-   * Password: *use the password you get in previous step*
+   - User: admin
+   - Password: _use the password you get in previous step_
 
    Click **log in**.
 
 #### Check the sample pipeline job
 
-After logged in, you will see the **Hello World Build & Deploy** pipline job. Please click to explore it.
+After logged in, you will see the **Hello World Build & Deploy** pipline job.
+Please click to explore it.
 
-![](images/jenkins-pipline-job.png) 
+![](images/jenkins-pipline-job.png)
 
 ### Access the hello world web app
 
@@ -196,7 +212,8 @@ After logged in, you will see the **Hello World Build & Deploy** pipline job. Pl
    aks get-credentials --resource-group <ResourceGroup> --name <KubenetesClusterName>
    ```
 
-   > Note: please replace \<ResourceGroup> and \<KubenetesClusterName> before executing it.
+   > Note: please replace \<ResourceGroup> and \<KubenetesClusterName> before
+   > executing it.
 
    When done, you will get a prompt:
 
@@ -206,7 +223,8 @@ After logged in, you will see the **Hello World Build & Deploy** pipline job. Pl
 
 #### Get Kubenetes service
 
-1. Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) if you have not.
+1. Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) if
+   you have not.
 
 2. Execute the command below:
 
@@ -229,8 +247,7 @@ After logged in, you will see the **Hello World Build & Deploy** pipline job. Pl
 1. Open the **external ip** in a browser. You will see the response:
 
    ```html
-   Hello World!
-   There are 0 request records.
+   Hello World! There are 0 request records.
    ```
 
 2. Refresh the page, the number of request records will increase.
@@ -241,8 +258,8 @@ After logged in, you will see the **Hello World Build & Deploy** pipline job. Pl
 
 2. Open it in a browser, then log in:
 
-   * User: admin
-   * Password: *use the Linux Admin Password*
+   - User: admin
+   - Password: _use the Linux Admin Password_
 
 3. Click **Home**.
 
@@ -255,4 +272,3 @@ After logged in, you will see the **Hello World Build & Deploy** pipline job. Pl
 4. You will see the graphs:
 
    ![](images/grafana-03.png)
-

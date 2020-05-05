@@ -11,9 +11,11 @@
 
 [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-secure-password%2Fazuredeploy.json)
 [![Deploy To Azure US Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-secure-password%2Fazuredeploy.json)
-[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-secure-password%2Fazuredeploy.json)    
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vm-secure-password%2Fazuredeploy.json)
 
-This template allows you to deploy a simple Windows VM by retrieving the password that is stored in a Key Vault. Therefore the password is never put in plain text in the template parameter file.
+This template allows you to deploy a simple Windows VM by retrieving the
+password that is stored in a Key Vault. Therefore the password is never put in
+plain text in the template parameter file.
 
 ## Add Secret to the Key Vault
 
@@ -34,7 +36,8 @@ az keyvault secret set --vault-name Contoso --name ITSecret --value 'password'
 
 ## Enable Key Vault for VM and Template secret access
 
-After this you'll need to enable the Key Vault for template deployment. You can do this using the following commands:
+After this you'll need to enable the Key Vault for template deployment. You can
+do this using the following commands:
 
 ```PowerShell
 Set-AzKeyVaultAccessPolicy -VaultName Contoso -EnabledForTemplateDeployment
@@ -43,5 +46,3 @@ Set-AzKeyVaultAccessPolicy -VaultName Contoso -EnabledForTemplateDeployment
 ```bash
 az keyvault update  --name Contoso --enabled-for-template-deployment true
 ```
-
-

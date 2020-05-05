@@ -9,20 +9,25 @@
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-cosmosdb-private-endpoint/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/101-cosmosdb-private-endpoint/CredScanResult.svg)
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-cosmosdb-private-endpoint%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-cosmosdb-private-endpoint%2Fazuredeploy.json)
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-cosmosdb-private-endpoint%2Fazuredeploy.json)
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-cosmosdb-private-endpoint%2Fazuredeploy.json)
+<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
 
     <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
 
-This template will create a virtual network, a Cosmos account and a private endpoint exposing the Cosmos account to the virtual network.
+This template will create a virtual network, a Cosmos account and a private
+endpoint exposing the Cosmos account to the virtual network.
 
-Below are the parameters which can be user configured in the parameters file including:
+Below are the parameters which can be user configured in the parameters file
+including:
 
-- **Location:** Select where the resource should be created (default is target resource group's location).
+- **Location:** Select where the resource should be created (default is target
+  resource group's location).
 - **Virtual Network Name:** Enter a name for the virtual network.
 - **Account Name:** Enter a name for the new Cosmos account.
-- **Public Network Access:** Select whether public traffic is allowed to access the account (default is Enabled). When value is set to Disabled, public network traffic is blocked even before the private endpoint is created.
+- **Public Network Access:** Select whether public traffic is allowed to access
+  the account (default is Enabled). When value is set to Disabled, public
+  network traffic is blocked even before the private endpoint is created.
 - **Private Endpoint Name:** Enter a name for the private endpoint.
 
 `Tags : CosmosDB`
-
