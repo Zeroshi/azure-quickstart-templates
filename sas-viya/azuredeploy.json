@@ -116,8 +116,6 @@
     "VirtualNetworkPublicSubnetCIDR": "10.0.128.0/24",
     "VirtualNetworkApplicationGatewaySubnet": "[concat(variables('VirtualNetworkName'), '_applicationGateway')]",
     "VirtualNetworkApplicationGatewaySubnetCIDR": "10.0.129.0/24",
-
-
     "DiagnosticStorageGroupName": "[toLower(concat('rg4diag', variables('resourceGroupUniqueString')))]",
     "AzureFilesViyaShare": "viyashare",
     "PrimaryUserName": "vmuser",
@@ -271,7 +269,6 @@
         ]
       }
     },
-
     {
       "name": "CreateNetwork",
       "type": "Microsoft.Resources/deployments",
@@ -313,15 +310,12 @@
           "VirtualNetworkApplicationGatewaySubnetCIDR": {
             "value": "[variables('VirtualNetworkApplicationGatewaySubnetCIDR')]"
           },
-          "LoadBalancerNetworkSecurityGroup":
-          {
+          "LoadBalancerNetworkSecurityGroup": {
             "value": "PrimaryViyaLoadbalancer_NetworkSecurityGroup"
           }
         }
       }
     },
-
-
     {
       "comments": "The primary application gateway for the SAS Viya Quickstart.",
       "type": "Microsoft.Network/applicationGateways",
@@ -690,8 +684,7 @@
           }
         }
       },
-      "resources": [
-      ]
+      "resources": []
     },
     {
       "name": "AnsiblePhase1SetupHostForAnsible",
@@ -725,7 +718,6 @@
         }
       }
     },
-
     {
       "name": "AnsiblePhase2GetLBCertPart1",
       "type": "Microsoft.Resources/deployments",
@@ -1161,8 +1153,7 @@
           }
         }
       },
-      "resources": [
-      ]
+      "resources": []
     },
     {
       "name": "controller/CASStartup",
@@ -1190,8 +1181,6 @@
         }
       }
     },
-
-
     {
       "comments": "The network interface of the Ansible controller. This will be accessible to the public within the bounds of the security groups.",
       "type": "Microsoft.Network/networkInterfaces",
@@ -1313,8 +1302,7 @@
           }
         }
       },
-      "resources": [
-      ],
+      "resources": [],
       "copy": {
         "name": "casworkercopy",
         "count": "[if(equals(parameters('CAS Node Count'), 1), 0, parameters('CAS Node Count'))]"
@@ -1350,12 +1338,6 @@
         "count": "[if(equals(parameters('CAS Node Count'), 1), 0, parameters('CAS Node Count'))]"
       }
     },
-
-
-
-
-
-
     {
       "comments": "The primary network security group of the various Services and Viya.",
       "type": "Microsoft.Network/networkSecurityGroups",
@@ -1567,8 +1549,7 @@
           }
         }
       },
-      "resources": [
-      ]
+      "resources": []
     },
     {
       "name": "services/ServicesStartup",
@@ -1637,31 +1618,31 @@
       "properties": {}
     },
     {
-    "apiVersion": "2019-10-01",
-    "name": "pid-479ba1d7-9b83-427f-b94f-ce441afe2b5c",
-    "type": "Microsoft.Resources/deployments",
-    "properties": {
+      "apiVersion": "2019-10-01",
+      "name": "pid-479ba1d7-9b83-427f-b94f-ce441afe2b5c",
+      "type": "Microsoft.Resources/deployments",
+      "properties": {
         "mode": "Incremental",
         "template": {
-            "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-            "contentVersion": "1.0.0.0",
-            "resources": []
+          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": []
         }
       }
     }
   ],
   "outputs": {
     "AnsibleControllerIP": {
-       "type": "string",
-       "value": "[reference('AnsibleController_PublicIP').ipAddress]"
-     },
+      "type": "string",
+      "value": "[reference('AnsibleController_PublicIP').ipAddress]"
+    },
     "SASDrive": {
-       "type": "string",
-       "value": "[if(empty(parameters('DeploymentDataLocation')), 'A testing license string was provided instead of a valid license URI. Therefore, SAS was not actually installed. Please replace DeploymentDataLocation with a valid license URI. For further details, see the Troubleshooting section in the Readme.', concat('https://', reference('PrimaryViyaLoadbalancer_PublicIP').dnsSettings.fqdn, json(split(reference('AnsiblePhase8GetCASURIsFromLicense').outputs.instanceView.value.statuses[0].message, '#DATA#')[1]).SAS_DRIVE))]"
-     },
+      "type": "string",
+      "value": "[if(empty(parameters('DeploymentDataLocation')), 'A testing license string was provided instead of a valid license URI. Therefore, SAS was not actually installed. Please replace DeploymentDataLocation with a valid license URI. For further details, see the Troubleshooting section in the Readme.', concat('https://', reference('PrimaryViyaLoadbalancer_PublicIP').dnsSettings.fqdn, json(split(reference('AnsiblePhase8GetCASURIsFromLicense').outputs.instanceView.value.statuses[0].message, '#DATA#')[1]).SAS_DRIVE))]"
+    },
     "SASStudio": {
-       "type": "string",
-       "value": "[if(empty(parameters('DeploymentDataLocation')), 'A testing license string was provided instead of a valid license URI. Therefore, SAS was not actually installed. Please replace DeploymentDataLocation with a valid license URI. For further details, see the Troubleshooting section in the Readme.', concat('https://', reference('PrimaryViyaLoadbalancer_PublicIP').dnsSettings.fqdn, json(split(reference('AnsiblePhase8GetCASURIsFromLicense').outputs.instanceView.value.statuses[0].message, '#DATA#')[1]).SAS_STUDIO))]"
-     }
+      "type": "string",
+      "value": "[if(empty(parameters('DeploymentDataLocation')), 'A testing license string was provided instead of a valid license URI. Therefore, SAS was not actually installed. Please replace DeploymentDataLocation with a valid license URI. For further details, see the Troubleshooting section in the Readme.', concat('https://', reference('PrimaryViyaLoadbalancer_PublicIP').dnsSettings.fqdn, json(split(reference('AnsiblePhase8GetCASURIsFromLicense').outputs.instanceView.value.statuses[0].message, '#DATA#')[1]).SAS_STUDIO))]"
+    }
   }
 }

@@ -80,8 +80,7 @@
       "apiVersion": "2018-06-01",
       "type": "Microsoft.DataFactory/factories",
       "location": "[parameters('location')]",
-      "properties": {
-      },
+      "properties": {},
       "resources": [
         {
           "name": "[concat(parameters('dataFactoryName'), '/SPAzureSsisIR')]",

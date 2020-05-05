@@ -28,7 +28,7 @@
       }
     }
   },
-  "variables": { },
+  "variables": {},
   "resources": [
     {
       "apiVersion": "2019-11-01",
